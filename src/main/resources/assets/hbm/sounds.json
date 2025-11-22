@@ -370,6 +370,12 @@
 	"entity.rocketFlyLight": {"category": "player", "sounds": [{"name": "entity/rocketFlyLight", "stream": false}]},
 	"entity.rocketIgnition": {"category": "player", "sounds": [{"name": "entity/rocketIgnition", "stream": false}]},
 	"entity.pipefail": {"category": "player", "sounds": [{"name": "entity/pipefail", "stream": false}]},
+	"entity.reapersay": {"category": "hostile", "sounds": ["entity/reapersay"]},
+	"entity.reaperhurt": {"category": "hostile", "sounds": ["entity/reaperhurt"]},
+	"entity.reaperdeath": {"category": "hostile", "sounds": ["entity/reaperdeath"]},
+	"entity.fbisay": {"category": "hostile", "sounds": ["entity/fbisay"]},
+	"entity.glyphidsay": {"category": "hostile", "sounds": ["entity/glyphidsay","entity/glyphidsay0"]},
+	"entity.glyphidhurt": {"category": "hostile", "sounds": ["entity/glyphidhurt"]},
 
 	"step.metal": {"category": "player", "sounds": [{"name": "footsteps/metal", "stream": false}]},
 	"step.iron_jump": {"category": "player", "sounds": [{"name": "footsteps/iron_jump", "stream": false}]},

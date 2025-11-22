@@ -6,6 +6,7 @@ import com.hbm.blocks.ModBlocks;
 import com.hbm.config.SpaceConfig;
 import com.hbm.dim.BiomeDecoratorCelestial;
 import com.hbm.dim.BiomeGenBaseCelestial;
+import net.minecraft.entity.monster.EntityBlaze;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -23,6 +24,8 @@ public abstract class BiomeGenBaseMoho extends BiomeGenBaseCelestial {
 	public BiomeGenBaseMoho(int id) {
 		super(id);
 		this.setDisableRain();
+		
+        this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityBlaze.class, 5, 2, 6));
 
 		BiomeDecoratorCelestial decorator = new BiomeDecoratorCelestial(ModBlocks.moho_stone);
 		decorator.lavaCount = 50;

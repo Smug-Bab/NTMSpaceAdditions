@@ -73,6 +73,7 @@ import com.hbm.render.model.ModelScrapFish;
 import com.hbm.render.model.ModelScutter;
 import com.hbm.render.model.ModelScuttlecrab;
 import com.hbm.render.model.ModelSifterEel;
+import com.hbm.render.model.ModelReaper;
 import com.hbm.render.tileentity.*;
 import com.hbm.render.util.MissilePart;
 import com.hbm.render.util.RenderInfoSystem;
@@ -841,7 +842,8 @@ public class ClientProxy extends ServerProxy {
 		RenderingRegistry.registerEntityRenderingHandler(EntityDepthSquid.class, new RenderEntityMulti(new ModelDepthSquid(), EntityDepthSquid.DepthSquid.class, 0.5F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityScrapFish.class, new RenderEntityMulti(new ModelScrapFish(), EntityScrapFish.ScrapFish.class, 0.5F));
 		RenderingRegistry.registerEntityRenderingHandler(EntitySifterEel.class, new RenderEntityMulti(new ModelSifterEel(), EntitySifterEel.SifterEel.class, 0.5F));
-
+		RenderingRegistry.registerEntityRenderingHandler(EntityReaper.class, new RenderReaper(new ModelReaper(), 1F));
+		
 		RenderingRegistry.registerEntityRenderingHandler(EntityDummy.class, new RenderDummy());
 		RenderingRegistry.registerEntityRenderingHandler(EntityUndeadSoldier.class, new RenderUndeadSoldier());
 		RenderingRegistry.registerEntityRenderingHandler(EntityDepress.class, new RenderEmpty());

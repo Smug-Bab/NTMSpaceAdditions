@@ -249,6 +249,7 @@ public class EntityMappings {
 		addMob(EntityScrapFish.class, "entity_scrapfish", 0xDF9835, 0x510E13);
 		addMob(EntitySifterEel.class, "entity_siftereel", 0x5B963E, 0xC0B286);
 		addMob(EntitySiegeCraft.class, "entity_micro_ufo", 0x5B963E, 0xC0B286);
+		addMob(EntityReaper.class, "entity_reaper", 0x000000, 0x000f00);
 
 		addMob(EntityFBI.class, "entity_ntm_fbi", 0x008000, 0x404040);
 		addMob(EntityFBIDrone.class, "entity_ntm_fbi_drone", 0x008000, 0x404040);

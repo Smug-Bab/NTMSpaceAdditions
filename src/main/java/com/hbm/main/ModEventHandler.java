@@ -923,6 +923,12 @@ public class ModEventHandler {
 	public void onEntityAttacked(LivingAttackEvent event) {
 
 		EntityLivingBase e = event.entityLiving;
+		
+		if (event.entity instanceof EntityBlaze) {
+			if ((event.source == ModDamageSource.oxyprime)) {
+				event.setCanceled(true);
+			}
+		}
 
 		if(e instanceof EntityPlayer) {
 

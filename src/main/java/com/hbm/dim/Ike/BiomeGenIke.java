@@ -6,6 +6,7 @@ import com.hbm.blocks.ModBlocks;
 import com.hbm.config.SpaceConfig;
 import com.hbm.dim.BiomeDecoratorCelestial;
 import com.hbm.dim.BiomeGenBaseCelestial;
+import com.hbm.entity.mob.EntityReaper;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,6 +20,9 @@ public class BiomeGenIke extends BiomeGenBaseCelestial {
 
 	public BiomeGenIke(int id) {
 		super(id);
+		
+        this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityReaper.class, 5, 2, 6));
+        
 		this.setBiomeName("Ike");
 		this.setDisableRain();
 
