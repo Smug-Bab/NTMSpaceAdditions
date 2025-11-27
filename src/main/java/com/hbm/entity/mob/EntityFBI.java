@@ -62,6 +62,10 @@ public class EntityFBI extends EntityMob implements IRangedAttackMob, ISuffocati
 		this.isImmuneToFire = true;
 	}
 
+	protected String getLivingSound() {
+		return "hbm:entity.fbisay";
+	}
+	
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.knockbackResistance).setBaseValue(0.5D);

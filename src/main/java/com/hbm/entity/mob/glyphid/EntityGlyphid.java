@@ -103,6 +103,14 @@ public class EntityGlyphid extends EntityMob implements IResistanceProvider, ISu
 		super(world);
 		this.setSize(1.75F, 1F);
 	}
+	
+	protected String getLivingSound() {
+		return "hbm:entity.glyphidsay";
+	}
+
+	protected String getHurtSound() {
+		return "hbm:entity.glyphidhurt";
+	}
 
 	public ResourceLocation getSkin() {
 		return ResourceManager.glyphid_tex;
