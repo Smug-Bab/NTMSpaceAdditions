@@ -22,7 +22,7 @@ public abstract class BiomeGenBaseEve extends BiomeGenBaseCelestial {
 	public BiomeGenBaseEve(int id) {
 		super(id);
 		
-        this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityParasiteMaggot.class, 5, 2, 6));
+        this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityParasiteMaggot.class, 1, 1, 3));
         
 		this.waterColorMultiplier = 0x5b009a;
 		this.setTemperatureRainfall(1.0F, 0.5F);

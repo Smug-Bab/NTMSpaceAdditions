@@ -25,7 +25,7 @@ public abstract class BiomeGenBaseMoho extends BiomeGenBaseCelestial {
 		super(id);
 		this.setDisableRain();
 		
-        this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityBlaze.class, 5, 2, 6));
+        this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityBlaze.class, 1, 1, 3));
 
 		BiomeDecoratorCelestial decorator = new BiomeDecoratorCelestial(ModBlocks.moho_stone);
 		decorator.lavaCount = 50;

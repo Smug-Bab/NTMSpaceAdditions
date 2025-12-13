@@ -23,7 +23,7 @@ public abstract class BiomeGenBaseDres extends BiomeGenBaseCelestial {
 	public BiomeGenBaseDres(int id) {
 		super(id);
 		
-		this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityRADBeast.class, 5, 2, 6));
+		this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityRADBeast.class, 1, 1, 3));
 		
 		this.setDisableRain();
 		this.setTemperatureRainfall(-1.0F, 0.0F);
