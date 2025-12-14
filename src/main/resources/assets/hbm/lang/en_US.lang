@@ -1339,6 +1339,7 @@ entity.hbm.entity_balls_o_tron_seg.name=Balls-O-Tron Segment
 entity.hbm.entity_bullet.name=Bullet
 entity.hbm.entity_rocket.name=Rocket
 entity.hbm.entity_schrabnel.name=Schrabnel
+entity.entity_reaper.name=Reaper
 
 error.generic=### I AM ERROR ###
 
