@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.collect.HashBiMap;
+import com.hbm.dim.CelestialBody;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraft.nbt.NBTTagCompound;
@@ -39,6 +40,8 @@ public abstract class CelestialBodyTrait {
 		registerTrait("dyson", CBT_Dyson.class);
 		registerTrait("impact", CBT_Impact.class);
 		registerTrait("lights", CBT_Lights.class);
+		registerTrait("invasion", CBT_Invasion.class);
+
 	};
 
 	private static void registerTrait(String name, Class<? extends CelestialBodyTrait> clazz) {
@@ -53,6 +56,6 @@ public abstract class CelestialBodyTrait {
 	public void readFromBytes(ByteBuf buf) { }
 	public void writeToBytes(ByteBuf buf) { }
 
-	public void update(boolean isremote) { }
+	public void update(boolean isremote, CelestialBody body) { }
 
 }
