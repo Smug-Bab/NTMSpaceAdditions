@@ -241,7 +241,6 @@ public class MainRegistry {
 	public static Achievement achBismuth;
 	public static Achievement achBreeding;
 	public static Achievement achFusion;
-	public static Achievement achMeltdown;
 	public static Achievement achDriveFail;
 
 	public static int generalOverride = 0;
@@ -275,7 +274,6 @@ public class MainRegistry {
 				polaroidID = rand.nextInt(18) + 1;
 		}
 
-		ShadyUtil.test();
 		loadConfig(PreEvent);
 		HbmPotion.init();
 
@@ -467,7 +465,6 @@ public class MainRegistry {
 		achBismuth = new Achievement("achievement.bismuth", "bismuth", 11, -6, ModItems.ingot_bismuth, achRBMK).initIndependentStat().registerStat();
 		achBreeding = new Achievement("achievement.breeding", "breeding", 7, -6, ModItems.ingot_am_mix, achRBMK).initIndependentStat().setSpecial().registerStat();
 		achFusion = new Achievement("achievement.fusion", "fusion", 13, -7, new ItemStack(ModBlocks.iter), achBismuth).initIndependentStat().setSpecial().registerStat();
-		achMeltdown = new Achievement("achievement.meltdown", "meltdown", 15, -7, ModItems.powder_balefire, achFusion).initIndependentStat().setSpecial().registerStat();
 		achRedBalloons = new Achievement("achievement.redBalloons", "redBalloons", 11, 0, ModItems.missile_nuclear, achPolymer).initIndependentStat().setSpecial().registerStat();
 		achManhattan = new Achievement("achievement.manhattan", "manhattan", 11, -4, new ItemStack(ModBlocks.nuke_boy), achPolymer).initIndependentStat().setSpecial().registerStat();
 
@@ -534,7 +531,6 @@ public class MainRegistry {
 			achBismuth,
 			achBreeding,
 			achFusion,
-			achMeltdown,
 			achRedBalloons,
 			achManhattan,
 		}));
@@ -583,7 +579,6 @@ public class MainRegistry {
 		MagicRecipes.register();
 		LemegetonRecipes.register();
 		SILEXRecipes.register();
-		RefineryRecipes.registerRefinery();
 		GasCentrifugeRecipes.register();
 
 		CustomMachineConfigJSON.initialize();
@@ -740,6 +735,7 @@ public class MainRegistry {
 		event.registerServerCommand(new CommandLocate());
 		event.registerServerCommand(new CommandTotalTime());
 		event.registerServerCommand(new CommandCustomize());
+		event.registerServerCommand(new CommandReapNetworks());
 		ArcFurnaceRecipes.registerFurnaceSmeltables(); // because we have to wait for other mods to take their merry ass time to register recipes
 	}
 
@@ -1534,6 +1530,71 @@ public class MainRegistry {
 		ignoreMappings.add("hbm:item.multitool_mega");
 		ignoreMappings.add("hbm:item.multitool_joule");
 		ignoreMappings.add("hbm:item.multitool_decon");
+		ignoreMappings.add("hbm:tile.struct_iter_core");
+		ignoreMappings.add("hbm:tile.struct_plasma_core");
+		ignoreMappings.add("hbm:tile.machine_amgen");
+		ignoreMappings.add("hbm:tile.machine_geo");
+		ignoreMappings.add("hbm:tile.ore_coal_oil");
+		ignoreMappings.add("hbm:tile.ore_coal_oil_burning");
+		ignoreMappings.add("hbm:tile.block_weidanium");
+		ignoreMappings.add("hbm:tile.block_reiium");
+		ignoreMappings.add("hbm:tile.block_unobtainium");
+		ignoreMappings.add("hbm:tile.block_daffergon");
+		ignoreMappings.add("hbm:tile.block_verticium");
+		ignoreMappings.add("hbm:tile.machine_schrabidium_transmutator");
+		ignoreMappings.add("hbm:tile.machine_discharger");
+		ignoreMappings.add("hbm:tile.fusion_conductor");
+		ignoreMappings.add("hbm:tile.fusion_center");
+		ignoreMappings.add("hbm:tile.fusion_motor");
+		ignoreMappings.add("hbm:tile.machine_spp_bottom");
+		ignoreMappings.add("hbm:tile.machine_spp_top");
+		ignoreMappings.add("hbm:tile.sat_mapper");
+		ignoreMappings.add("hbm:tile.sat_radar");
+		ignoreMappings.add("hbm:tile.sat_scanner");
+		ignoreMappings.add("hbm:tile.sat_laser");
+		ignoreMappings.add("hbm:tile.sat_foeq");
+		ignoreMappings.add("hbm:tile.sat_resonator");
+		ignoreMappings.add("hbm:item.sliding_blast_door_skin");
+		ignoreMappings.add("hbm:tile.dummy_block_vault");
+		ignoreMappings.add("hbm:item.toothpicks");
+		ignoreMappings.add("hbm:item.ams_focus_blank");
+		ignoreMappings.add("hbm:item.ams_focus_limiter");
+		ignoreMappings.add("hbm:item.ams_focus_booster");
+		ignoreMappings.add("hbm:item.ams_muzzle");
+		ignoreMappings.add("hbm:tile.machine_transformer_dnt");
+		ignoreMappings.add("hbm:tile.hadron_plating");
+		ignoreMappings.add("hbm:tile.hadron_plating_blue");
+		ignoreMappings.add("hbm:tile.hadron_plating_black");
+		ignoreMappings.add("hbm:tile.hadron_plating_yellow");
+		ignoreMappings.add("hbm:tile.hadron_plating_striped");
+		ignoreMappings.add("hbm:tile.hadron_plating_voltz");
+		ignoreMappings.add("hbm:tile.hadron_plating_glass");
+		ignoreMappings.add("hbm:tile.hadron_power");
+		ignoreMappings.add("hbm:tile.hadron_diode");
+		ignoreMappings.add("hbm:tile.hadron_analysis");
+		ignoreMappings.add("hbm:tile.hadron_analysis_glass");
+		ignoreMappings.add("hbm:tile.hadron_access");
+		ignoreMappings.add("hbm:tile.hadron_core");
+		ignoreMappings.add("hbm:tile.machine_assembler");
+		ignoreMappings.add("hbm:tile.machine_assemfac");
+		ignoreMappings.add("hbm:tile.machine_chemplant");
+		ignoreMappings.add("hbm:tile.machine_chemfac");
+		ignoreMappings.add("hbm:item.assembly_template");
+		ignoreMappings.add("hbm:item.chemistry_template");
+		ignoreMappings.add("hbm:item.chemistry_icon");
+		ignoreMappings.add("hbm:item.particle_aproton");
+		ignoreMappings.add("hbm:item.particle_aelectron");
+		ignoreMappings.add("hbm:tile.test_core");
+		ignoreMappings.add("hbm:tile.test_charge");
+		ignoreMappings.add("hbm:item.t45_helmet");
+		ignoreMappings.add("hbm:item.t45_plate");
+		ignoreMappings.add("hbm:item.t45_legs");
+		ignoreMappings.add("hbm:item.t45_boots");
+		ignoreMappings.add("hbm:item.tritium_deuterium_cake");
+		ignoreMappings.add("hbm:item.redcoil_capacitor");
+		ignoreMappings.add("hbm:item.euphemium_capacitor");
+		ignoreMappings.add("hbm:item.toolbox_legacy");
+		ignoreMappings.add("hbm:tile.rbmk_burner");
 
 		/// REMAP ///
 		remapItems.put("hbm:item.gadget_explosive8", ModItems.early_explosive_lenses);
@@ -1541,7 +1602,6 @@ public class MainRegistry {
 		remapItems.put("hbm:item.briquette_lignite", ModItems.briquette);
 		remapItems.put("hbm:item.antiknock", ModItems.fuel_additive);
 		remapItems.put("hbm:item.kit_toolbox_empty", ModItems.toolbox);
-		remapItems.put("hbm:item.kit_toolbox", ModItems.legacy_toolbox);
 
 		for(MissingMapping mapping : event.get()) {
 

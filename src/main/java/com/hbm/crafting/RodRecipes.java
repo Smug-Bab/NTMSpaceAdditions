@@ -49,7 +49,7 @@ public class RodRecipes {
 		CraftingManager.addShapelessAuto(new ItemStack(ModItems.waste_zfb_mox, 2, 1), new Object[] { ModItems.rod_zirnox_zfb_mox_depleted });
 		
 		//Breeding Rods
-		CraftingManager.addRecipeAuto(new ItemStack(ModItems.rod_empty, 16), new Object[] { "SSS", "L L", "SSS", 'S', STEEL.plate528(), 'L', PB.plate528() });
+		CraftingManager.addRecipeAuto(new ItemStack(ModItems.rod_empty, 16), new Object[] { "SSS", "L L", "SSS", 'S', STEEL.plate(), 'L', PB.plate() });
 		CraftingManager.addShapelessAuto(new ItemStack(ModItems.rod_empty, 2), new Object[] { ModItems.rod_dual_empty });
 		CraftingManager.addShapelessAuto(new ItemStack(ModItems.rod_dual_empty, 1), new Object[] { ModItems.rod_empty, ModItems.rod_empty });
 		CraftingManager.addShapelessAuto(new ItemStack(ModItems.rod_empty, 4), new Object[] { ModItems.rod_quad_empty });
@@ -101,6 +101,7 @@ public class RodRecipes {
 		addRBMKRod(ModItems.billet_uranium_fuel, ModItems.rbmk_fuel_meu);
 		addRBMKRod(U233, ModItems.rbmk_fuel_heu233);
 		addRBMKRod(U235, ModItems.rbmk_fuel_heu235);
+		addRBMKRod(ModItems.billet_uzh, ModItems.rbmk_fuel_uzh);
 		addRBMKRod(ModItems.billet_thorium_fuel, ModItems.rbmk_fuel_thmeu);
 		addRBMKRod(ModItems.billet_mox_fuel, ModItems.rbmk_fuel_mox);
 		addRBMKRod(ModItems.billet_plutonium_fuel, ModItems.rbmk_fuel_lep);
@@ -172,30 +173,30 @@ public class RodRecipes {
 
 		CraftingManager.addRecipeAuto(new ItemStack(ModItems.icf_pellet_empty), new Object[] { "ZLZ", "L L", "ZLZ", 'Z', ZR.wireFine(), 'L', PB.wireFine() });
 	}
-	
+
 	public static void registerInit() {
 		/* GT6 */
-		if(OreDictionary.doesOreNameExist("ingotNaquadah-Enriched"))	addPellet(new DictFrame("Naquadah-Enriched"),	EnumWatzType.NQD);
+		if(OreDictionary.doesOreNameExist("ingotNaquadahEnriched"))		addPellet(new DictFrame("NaquadahEnriched"),	EnumWatzType.NQD);
 		if(OreDictionary.doesOreNameExist("ingotNaquadria"))			addPellet(new DictFrame("Naquadria"),			EnumWatzType.NQR);
 		CraftingManager.addShapelessAuto(new ItemStack(ModItems.rbmk_fuel_drx, 1), new Object[] { ModItems.rbmk_fuel_balefire, ModItems.particle_digamma });
 
 	}
-	
+
 	//Fill rods with one billet. For fuels only, therefore no unloading or ore dict
 	public static void addFuelRodBillet(Item billet, Item out) {
 		CraftingManager.addShapelessAuto(new ItemStack(out), new Object[] { ModItems.rod_empty, billet });
 	}
-	
+
 	//Fill rods with two billets
 	public static void addDualFuelRodBillet(Item billet, Item out) {
 		CraftingManager.addShapelessAuto(new ItemStack(out), new Object[] { ModItems.rod_dual_empty, billet, billet });
 	}
-	
+
 	//Fill rods with three billets
 	public static void addQuadFuelRodBillet(Item billet, Item out) {
 		CraftingManager.addShapelessAuto(new ItemStack(out), new Object[] { ModItems.rod_quad_empty, billet, billet, billet, billet });
 	}
-	
+
 	//Fill rods with one billet + unload
 	public static void addRodBilletUnload(Item billet, Item out) {
 		CraftingManager.addShapelessAuto(new ItemStack(out), new Object[] { ModItems.rod_empty, billet });

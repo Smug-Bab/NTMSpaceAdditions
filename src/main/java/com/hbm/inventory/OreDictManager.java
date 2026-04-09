@@ -299,11 +299,6 @@ public class OreDictManager {
 	public static final DictFrame TASMANITE = new DictFrame("Tasmanite");
 	public static final DictFrame AYERITE = new DictFrame("Ayerite");
 
-	public static final DictFrame REIIUM = new DictFrame("Reiium");
-	public static final DictFrame WEIDANIUM = new DictFrame("Weidanium");
-	public static final DictFrame UNOBTAINIUM = new DictFrame("Unobtainium");
-	public static final DictFrame VERTICIUM = new DictFrame("Verticium");
-	public static final DictFrame DAFFERGON = new DictFrame("Daffergon");
 	/*
 	 * RARE EARTHS
 	 */
@@ -539,14 +534,9 @@ public class OreDictManager {
 		 * RARE METALS
 		 */
 		AUSTRALIUM	.nugget(nugget_australium)			.billet(billet_australium)			.ingot(ingot_australium)	.dust(powder_australium)	.block(block_australium)	.oreAll(ore_australium);
-		TASMANITE	.nugget(nugget_australium_lesser)	.billet(billet_australium_lesser);
-		AYERITE		.nugget(nugget_australium_greater)	.billet(billet_australium_greater);
+		TASMANITE	.nugget(nugget_australium_lesser)	.billet(billet_australium_lesser)	.ingot(ingot_australium_lesser);
+		AYERITE		.nugget(nugget_australium_greater)	.billet(billet_australium_greater)	.ingot(ingot_australium_greater);
 
-		REIIUM		.block(block_reiium);
-		WEIDANIUM	.block(block_weidanium);
-		UNOBTAINIUM	.block(block_unobtainium);
-		VERTICIUM	.block(block_verticium);
-		DAFFERGON	.block(block_daffergon);
 
 		/*
 		 * RARE EARTHS
@@ -883,9 +873,6 @@ public class OreDictManager {
 		public String stock() {			return STOCK.name()				+ mats[0]; }
 		public String grip() {			return GRIP.name()				+ mats[0]; }
 		public String[] all(MaterialShapes shape) {				return appendToAll(shape.prefixes); }
-
-		/** Returns cast (triple) plates if 528 mode is enabled or normal plates if not */
-		public String plate528() { return GeneralConfig.enable528 ? plateCast() : plate(); }
 
 		private String[] appendToAll(String... prefix) {
 

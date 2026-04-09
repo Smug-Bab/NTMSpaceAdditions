@@ -20,6 +20,7 @@ import com.hbm.entity.mob.*;
 import com.hbm.entity.mob.botprime.*;
 import com.hbm.entity.mob.glyphid.*;
 import com.hbm.entity.mob.siege.EntitySiegeCraft;
+import com.hbm.entity.mob.siege.EntitySiegeUFO;
 import com.hbm.entity.particle.*;
 import com.hbm.entity.projectile.*;
 import com.hbm.entity.train.EntityRailCarBase.BoundingBoxDummyEntity;
@@ -160,6 +161,7 @@ public class EntityMappings {
 		addEntity(EntityBuilding.class, "entity_falling_building", 1000);
 		addEntity(EntitySoyuz.class, "entity_soyuz", 1000);
 		addEntity(EntitySoyuzCapsule.class, "entity_soyuz_capsule", 1000);
+		addEntity(EntityCombatDropPod.class, "entity_combat_pod", 1000);
 		addEntity(EntityParachuteCrate.class, "entity_parachute_crate", 1000);
 		addEntity(EntityMovingItem.class, "entity_c_item", 1000);
 		addEntity(EntityMovingPackage.class, "entity_c_package", 1000);
@@ -174,6 +176,7 @@ public class EntityMappings {
 		addEntity(EntityBlockSpider.class, "entity_taintcrawler", 1000);
 		addEntity(EntityRBMKDebris.class, "entity_rbmk_debris", 1000);
 		addEntity(EntityUFO.class, "entity_ntm_ufo", 1000);
+		addMob(EntitySiegeUFO.class, "entity_meme_ufo", 0x303030, 0x800000);
 		addEntity(EntityQuasar.class, "entity_digamma_quasar", 250);
 		addEntity(EntitySpear.class, "entity_digamma_spear", 1000);
 		addEntity(EntityMissileVolcano.class, "entity_missile_volcano", 1000);
@@ -186,10 +189,8 @@ public class EntityMappings {
 		addEntity(EntityGrenadeBouncyGeneric.class, "entity_grenade_bouncy_generic", 250);
 		addEntity(EntityGrenadeImpactGeneric.class, "entity_grenade_impact_generic", 250);
 		addEntity(EntityMinecartCrate.class, "entity_ntm_cart_crate", 250, false);
-		addEntity(EntityMinecartDestroyer.class, "entity_ntm_cart_crate", 250, false);
+		addEntity(EntityMinecartDestroyer.class, "entity_ntm_cart_destroyer", 250, false);
 		addEntity(EntityMinecartOre.class, "entity_ntm_cart_ore", 250, false);
-		addEntity(EntityMinecartBogie.class, "entity_ntm_cart_bogie", 250, false);
-		addEntity(EntityMagnusCartus.class, "entity_ntm_cart_chungoid", 250, false);
 		addEntity(EntityMinecartPowder.class, "entity_ntm_cart_powder", 250, false);
 		addEntity(EntityMinecartSemtex.class, "entity_ntm_cart_semtex", 250, false);
 		addEntity(EntityNukeTorex.class, "entity_effect_torex", 250, false);
@@ -221,6 +222,7 @@ public class EntityMappings {
 
 		addMob(EntityWarBehemoth.class, "entity_war_behemoth", 0x204131, 0x75CE00);
 		addMob(EntityTankbot.class, "entity_tankbot", 0x204131, 0x75CE00);
+		addMob(EntityBFAngel.class, "entity_ntm_bfa", 0x204131, 0x75CE00);
 
 		addMob(EntityCreeperNuclear.class, "entity_mob_nuclear_creeper", 0x204131, 0x75CE00);
 		addMob(EntityCreeperTainted.class, "entity_mob_tainted_creeper", 0x813b9b, 0xd71fdd);
@@ -244,7 +246,6 @@ public class EntityMappings {
 		addMob(EntityScrapFish.class, "entity_scrapfish", 0xDF9835, 0x510E13);
 		addMob(EntitySifterEel.class, "entity_siftereel", 0x5B963E, 0xC0B286);
 		addMob(EntitySiegeCraft.class, "entity_micro_ufo", 0x5B963E, 0xC0B286);
-		addMob(EntityReaper.class, "entity_reaper", 0x000000, 0x000f00);
 
 		addMob(EntityFBI.class, "entity_ntm_fbi", 0x008000, 0x404040);
 		addMob(EntityFBIDrone.class, "entity_ntm_fbi_drone", 0x008000, 0x404040);
@@ -262,6 +263,7 @@ public class EntityMappings {
 		addMob(EntityParasiteMaggot.class, "entity_parasite_maggot", 0xd0d0d0, 0x808080);
 		addMob(EntityDummy.class, "entity_ntm_test_dummy", 0xffffff, 0x000000);
 		addMob(EntityUndeadSoldier.class, "entity_ntm_undead_soldier", 0x749F30, 0x6C5B44);
+		addMob(EntityReaper.class, "entity_reaper", 0x000000, 0x000f00);
 
 		addSpawn(EntityCreeperPhosgene.class, 5, 1, 1, EnumCreatureType.monster, BiomeGenBase.getBiomeGenArray());
 		addSpawn(EntityCreeperVolatile.class, 10, 1, 1, EnumCreatureType.monster, BiomeGenBase.getBiomeGenArray());
