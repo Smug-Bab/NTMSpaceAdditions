@@ -247,7 +247,7 @@ public class ResourceManager {
 	public static final IModelCustom sphere_ruv = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/sphere_ruv.obj"));
 	public static final IModelCustom sphere_iuv = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/sphere_iuv.obj"));
 	public static final IModelCustom sphere_uv = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/sphere_uv.obj"));
-	//public static final IModelCustom sphere_uv_anim = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/sphere_uv.hmf"));
+	public static final IModelCustom sphere_new = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/sphere_new.obj")).asVBO();
 	public static final IModelCustom sphere_v2 = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/spherev2.obj"));
 	public static final IModelCustom hemisphere = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/uvwave.obj"));
 
@@ -1008,9 +1008,7 @@ public class ResourceManager {
 	public static final IModelCustom bolter = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/bolter.obj")).asVBO();
 	public static final IModelCustom detonator_laser = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/detonator_laser.obj")).asVBO();
 	public static final IModelCustom fireext = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/fireext.obj")).asVBO();
-	public static final IModelCustom ff_nightmare = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/nightmare.obj"));
 	public static final IModelCustom coilgun = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/coilgun.obj")).asVBO();
-	public static final IModelCustom cryocannon = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/cryo_cannon.obj")).asVBO();
 
 	public static final IModelCustom pepperbox = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/pepperbox.obj")).asVBO();
 	public static final IModelCustom bio_revolver = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/bio_revolver.obj")).asVBO();
@@ -1065,8 +1063,7 @@ public class ResourceManager {
 
 	public static final IModelCustom lance = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/lance.obj"));
 
-	public static final IModelCustom grenade_frag = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/grenade_frag.obj"));
-	public static final IModelCustom grenade_aschrab = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/grenade_aschrab.obj"));
+	public static final IModelCustom grenades = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/weapons/grenades.obj"));
 
 	public static final IModelCustom armor_bj = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/armor/BJ.obj")).asVBO();
 	public static final IModelCustom armor_hev = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/armor/hev.obj")).asVBO();
@@ -1122,7 +1119,6 @@ public class ResourceManager {
 	public static final ResourceLocation chemthrower_tex = new ResourceLocation(RefStrings.MODID, "textures/models/weapons/chemthrower.png");
 	public static final ResourceLocation m2_tex = new ResourceLocation(RefStrings.MODID, "textures/models/weapons/m2_browning.png");
 	public static final ResourceLocation coilgun_tex = new ResourceLocation(RefStrings.MODID, "textures/models/weapons/coilgun.png");
-	public static final ResourceLocation cryocannon_tex = new ResourceLocation(RefStrings.MODID, "textures/models/weapons/cryo_cannon.png");
 	public static final ResourceLocation congolake_tex = new ResourceLocation(RefStrings.MODID, "textures/models/weapons/congolake.png");
 
 	public static final ResourceLocation debug_gun_tex = new ResourceLocation(RefStrings.MODID, "textures/models/weapons/debug_gun.png");
@@ -1206,8 +1202,22 @@ public class ResourceManager {
 	public static final ResourceLocation ff_gun_dark = new ResourceLocation(RefStrings.MODID, "textures/models/weapons/ff/gun_dark.png");
 	public static final ResourceLocation ff_gun_normal = new ResourceLocation(RefStrings.MODID, "textures/models/weapons/ff/gun_normal.png");
 
-	public static final ResourceLocation grenade_mk2 = new ResourceLocation(RefStrings.MODID, "textures/models/weapons/grenade_mk2.png");
-	public static final ResourceLocation grenade_aschrab_tex = new ResourceLocation(RefStrings.MODID, "textures/models/weapons/grenade_aschrab.png");
+	public static final ResourceLocation grenade_frag_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/frag.png");
+	public static final ResourceLocation grenade_frag_body_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/frag_body.png");
+	public static final ResourceLocation grenade_frag_label_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/frag_label.png");
+	public static final ResourceLocation grenade_frag_fuze_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/frag_fuze.png");
+	public static final ResourceLocation grenade_stick_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/stick.png");
+	public static final ResourceLocation grenade_stick_body_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/stick_body.png");
+	public static final ResourceLocation grenade_stick_label_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/stick_label.png");
+	public static final ResourceLocation grenade_stick_fuze_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/stick_fuze.png");
+	public static final ResourceLocation grenade_tech_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/tech.png");
+	public static final ResourceLocation grenade_tech_body_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/tech_body.png");
+	public static final ResourceLocation grenade_tech_lights_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/tech_lights.png");
+	public static final ResourceLocation grenade_tech_fuze_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/tech_fuze.png");
+	public static final ResourceLocation grenade_nuka_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/nuka.png");
+	public static final ResourceLocation grenade_nuka_body_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/nuka_body.png");
+	public static final ResourceLocation grenade_nuka_label_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/nuka_label.png");
+	public static final ResourceLocation grenade_nuka_fuze_tex = new ResourceLocation(RefStrings.MODID, "textures/models/grenades/nuka_fuze.png");
 
 	public static final ResourceLocation bj_eyepatch = new ResourceLocation(RefStrings.MODID, "textures/armor/bj_eyepatch.png");
 	public static final ResourceLocation bj_leg = new ResourceLocation(RefStrings.MODID, "textures/armor/bj_leg.png");
@@ -1779,6 +1789,8 @@ public class ResourceManager {
 	public static final HFRWavefrontObjectVBO rbmk_button = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/rbmk/button.obj")).asVBO();
 	public static final HFRWavefrontObjectVBO rbmk_gauge = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/rbmk/gauge.obj")).asVBO();
 	public static final HFRWavefrontObjectVBO rbmk_numitron = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/rbmk/numitron.obj")).asVBO();
+	public static final HFRWavefrontObjectVBO rbmk_lever = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/rbmk/lever.obj")).asVBO();
+	public static final HFRWavefrontObjectVBO rbmk_indicator = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/rbmk/indicator.obj")).asVBO();
 	public static final HFRWavefrontObject rbmk_debris = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/rbmk/debris.obj")).noSmooth();
 	public static final ResourceLocation rbmk_crane_console_tex = new ResourceLocation(RefStrings.MODID, "textures/models/machines/crane_console.png");
 	public static final ResourceLocation rbmk_crane_tex = new ResourceLocation(RefStrings.MODID, "textures/models/machines/rbmk_crane.png");
@@ -1788,6 +1800,8 @@ public class ResourceManager {
 	public static final ResourceLocation rbmk_gauge_tex = new ResourceLocation(RefStrings.MODID, "textures/models/network/gauge.png");
 	public static final ResourceLocation rbmk_numitron_tex = new ResourceLocation(RefStrings.MODID, "textures/models/network/numitron.png");
 	public static final ResourceLocation rbmk_numitron_lights_tex = new ResourceLocation(RefStrings.MODID, "textures/models/network/numitron_lights.png");
+	public static final ResourceLocation rbmk_lever_tex = new ResourceLocation(RefStrings.MODID, "textures/models/network/lever.png");
+	public static final ResourceLocation rbmk_indicator_tex = new ResourceLocation(RefStrings.MODID, "textures/models/network/indicator.png");
 	public static final HFRWavefrontObject hev_battery = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/blocks/battery.obj")).noSmooth();
 	public static final HFRWavefrontObject anvil = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/blocks/anvil.obj")).noSmooth();
 	public static final HFRWavefrontObject crystal_power = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/blocks/crystals_power.obj")).noSmooth();

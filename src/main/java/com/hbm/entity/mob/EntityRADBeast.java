@@ -8,8 +8,6 @@ import com.hbm.lib.ModDamageSource;
 import com.hbm.main.MainRegistry;
 
 import api.hbm.entity.ISuffocationImmune;
-import com.hbm.lib.ModDamageSource;
-import net.minecraft.util.DamageSource;
 import api.hbm.entity.IRadiationImmune;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -32,8 +30,8 @@ public class EntityRADBeast extends EntityMob implements IRadiationImmune, ISuff
 		this.isImmuneToFire = true;
 		this.experienceValue = 30;
 	}
-	
-	@Override
+
+		@Override
 	public boolean attackEntityFrom(DamageSource source, float amount) {
 
 		if ((source == ModDamageSource.oxyprime || source == ModDamageSource.acid)) {

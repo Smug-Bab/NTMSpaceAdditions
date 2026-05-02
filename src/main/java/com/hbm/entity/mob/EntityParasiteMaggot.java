@@ -15,7 +15,7 @@ public class EntityParasiteMaggot extends EntityMob implements ISuffocationImmun
 		super(world);
 		this.setSize(0.3F, 0.7F);
 	}
-	
+
 	@Override
 	public boolean attackEntityFrom(DamageSource source, float amount) {
 

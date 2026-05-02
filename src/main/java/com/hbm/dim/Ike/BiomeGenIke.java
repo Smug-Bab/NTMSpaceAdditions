@@ -20,9 +20,9 @@ public class BiomeGenIke extends BiomeGenBaseCelestial {
 
 	public BiomeGenIke(int id) {
 		super(id);
+
+		this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityReaper.class, 1, 2, 6));
 		
-        this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityReaper.class, 1, 2, 6));
-        
 		this.setBiomeName("Ike");
 		this.setDisableRain();
 
