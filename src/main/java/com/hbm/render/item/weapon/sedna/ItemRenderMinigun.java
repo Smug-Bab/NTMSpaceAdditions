@@ -87,9 +87,10 @@ public class ItemRenderMinigun extends ItemRenderWeaponBase {
 			GL11.glTranslated(0, 0, -0.25);
 			renderLaserFlash(gun.lastShot[0], 50, 0.5D, 0xff0080);
 		} else {
+			GL11.glTranslated(0, 0.5, 0);
 			GL11.glRotated(gun.shotRand * 90, 1, 0, 0);
 			GL11.glScaled(1.5, 1.5, 1.5);
-			this.renderMuzzleFlash(gun.lastShot[0], 75, 5);
+			this.renderMuzzleFlash(gun.lastShot[0], 50, 7.5);
 		}
 		GL11.glPopMatrix();
 	}
@@ -153,9 +154,16 @@ public class ItemRenderMinigun extends ItemRenderWeaponBase {
 				GL11.glTranslated(0, 0, -0.25);
 				renderLaserFlash(shot, 50, 0.5D, 0xff0080);
 			} else {
+<<<<<<< HEAD
 				GL11.glRotated(shotRand * 90, 1, 0, 0);
 				GL11.glScaled(1.5, 1.5, 1.5);
 				this.renderMuzzleFlash(shot, 75, 5);
+=======
+				GL11.glTranslated(0, 0.5, 0);
+				GL11.glRotated(shotRand * 90, 1, 0, 0);
+				GL11.glScaled(1.5, 1.5, 1.5);
+				this.renderMuzzleFlash(shot, 50, 7.55);
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 			}
 			GL11.glPopMatrix();
 		}

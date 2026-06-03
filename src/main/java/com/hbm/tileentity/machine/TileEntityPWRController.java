@@ -8,6 +8,7 @@ import java.util.Map.Entry;
 import com.hbm.blocks.ModBlocks;
 import com.hbm.handler.CompatHandler;
 import com.hbm.interfaces.IControlReceiver;
+import com.hbm.interfaces.NotableComments;
 import com.hbm.inventory.container.ContainerPWR;
 import com.hbm.inventory.fluid.Fluids;
 import com.hbm.inventory.fluid.tank.FluidTank;
@@ -47,6 +48,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
+@NotableComments
 @Optional.InterfaceList({@Optional.Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = "OpenComputers")})
 public class TileEntityPWRController extends TileEntityMachineBase implements IGUIProvider, IControlReceiver, SimpleComponent, IFluidStandardTransceiverMK2, CompatHandler.OCComponent, IRORValueProvider, IRORInteractive {
 
@@ -638,6 +640,7 @@ public class TileEntityPWRController extends TileEntityMachineBase implements IG
 	@Override public FluidTank[] getAllTanks() { return tanks; }
 	@Override public FluidTank[] getSendingTanks() { return new FluidTank[] { tanks[1] }; }
 	@Override public FluidTank[] getReceivingTanks() { return new FluidTank[] { tanks[0] }; }
+<<<<<<< HEAD
 
 	@Override
 	public String[] getFunctionInfo() {
@@ -649,10 +652,30 @@ public class TileEntityPWRController extends TileEntityMachineBase implements IG
 				PREFIX_FUNCTION + "setrods" + NAME_SEPARATOR + "percent",
 				PREFIX_FUNCTION + "jettison",
 		};
+=======
+	
+	public static final String[] ROR = new String[] { // not to be confused with RUR
+		PREFIX_VALUE + "rods",
+		PREFIX_VALUE + "coreheat",
+		PREFIX_VALUE + "hullheat",
+		PREFIX_VALUE + "flux",
+		PREFIX_VALUE + "depletion",
+		PREFIX_FUNCTION + "setrods" + NAME_SEPARATOR + "percent",
+		PREFIX_FUNCTION + "jettison",
+	};
+
+	@Override
+	public String[] getFunctionInfo() {
+		return ROR;
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	}
 
 	@Override
 	public String provideRORValue(String name) {
+<<<<<<< HEAD
+=======
+		if((PREFIX_VALUE + "rods").equals(name))		return "" + (int) (100 - this.rodLevel); // why the fuck did i invert this again?
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		if((PREFIX_VALUE + "coreheat").equals(name))	return "" + this.coreHeat;
 		if((PREFIX_VALUE + "hullheat").equals(name))	return "" + this.hullHeat;
 		if((PREFIX_VALUE + "flux").equals(name))		return "" + (int) this.flux;

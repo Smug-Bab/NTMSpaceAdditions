@@ -236,4 +236,22 @@ public class TileEntityMachineIndustrialTurbine extends TileEntityTurbineBase im
 		
 		return bb;
 	}
+<<<<<<< HEAD
+=======
+
+	@Override
+	public String[] getFunctionInfo() {
+		return new String[] {
+				PREFIX_VALUE + "output",
+				PREFIX_VALUE + "flywheel"
+		};
+	}
+	
+	@Override
+	public String provideRORValue(String name) {
+		if((PREFIX_VALUE + "output").equals(name))		return "" + (int) this.powerBuffer;
+		if((PREFIX_VALUE + "flywheel").equals(name))	return "" + (int) (spin * 100);
+		return null;
+	}
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 }

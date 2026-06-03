@@ -10,14 +10,17 @@ import com.hbm.config.WorldConfig;
 import com.hbm.dim.CelestialBody;
 import com.hbm.dim.SolarSystem;
 import com.hbm.dim.WorldProviderCelestial;
+<<<<<<< HEAD
 import com.hbm.itempool.ItemPool;
 import com.hbm.itempool.ItemPoolsComponent;
 import com.hbm.itempool.ItemPoolsRedRoom;
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import com.hbm.items.ModItems;
 import com.hbm.main.StructureManager;
 import com.hbm.world.dungeon.AncientTomb;
-import com.hbm.world.gen.nbt.NBTStructure;
 import com.hbm.world.gen.nbt.JigsawPiece;
+import com.hbm.world.gen.nbt.NBTStructure;
 import com.hbm.world.gen.nbt.SpawnCondition;
 import com.hbm.world.generator.DungeonToolbox;
 
@@ -25,8 +28,11 @@ import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+<<<<<<< HEAD
 import net.minecraft.util.WeightedRandom;
 import net.minecraft.util.WeightedRandomChestContent;
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 

@@ -15,8 +15,11 @@ public class PacketDispatcher {
 	public static void registerPackets() {
 		int i = 0;
 
+<<<<<<< HEAD
 		//Signals server to consume items and create template
 		wrapper.registerMessage(ItemFolderPacket.Handler.class, ItemFolderPacket.class, i++, Side.SERVER);
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		//Siren packet for looped sounds
 		wrapper.registerMessage(TESirenPacket.Handler.class, TESirenPacket.class, i++, Side.CLIENT);
 		//Signals server to change ItemStacks

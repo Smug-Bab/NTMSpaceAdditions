@@ -105,6 +105,15 @@ public class OreDictManager {
 	public static final String KEY_TOOL_TORCH = "ntmtorch";
 
 	public static final String KEY_GLYPHID_MEAT = "glyphidMeat";
+<<<<<<< HEAD
+=======
+	public static final String KEY_FLOUR = "foodFlour";
+	public static final String KEY_BUTTER = "foodButter";
+	public static final String KEY_CHEESE = "foodCheese";
+	public static final String KEY_STRAWBERRY = "cropStrawberry";
+	public static final String KEY_STRAWBERRY_ICECREAM = "foodStrawberryicecream";
+	public static final String KEY_STRAWBERRY_MILKSHAKE = "foodStrawberrymilkshake";
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 	/*
 	 * MATERIALS
@@ -614,6 +623,19 @@ public class OreDictManager {
 		OreDictionary.registerOre(KEY_GLYPHID_MEAT, new ItemStack(glyphid_meat));
 		OreDictionary.registerOre(KEY_GLYPHID_MEAT, new ItemStack(glyphid_meat_grilled));
 
+<<<<<<< HEAD
+=======
+		/*
+		 * foude
+		 */
+		OreDictionary.registerOre(KEY_FLOUR, new ItemStack(flour));
+		OreDictionary.registerOre(KEY_BUTTER, new ItemStack(butter));
+		OreDictionary.registerOre(KEY_CHEESE, new ItemStack(cheese));
+		OreDictionary.registerOre(KEY_STRAWBERRY, new ItemStack(strawberry));
+		OreDictionary.registerOre(KEY_STRAWBERRY_ICECREAM, new ItemStack(s_cream));
+		OreDictionary.registerOre(KEY_STRAWBERRY_MILKSHAKE, new ItemStack(glass_smilk));
+
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		for(NTMMaterial mat : Mats.orderedList) {
 			if(mat.smeltable == SmeltingBehavior.SMELTABLE) {
 				if(mat.autogen.contains(MaterialShapes.CASTPLATE)) for(String name : mat.names) OreDictionary.registerOre(MaterialShapes.CASTPLATE.name() + name, new ItemStack(ModItems.plate_cast, 1, mat.id));

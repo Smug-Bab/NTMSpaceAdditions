@@ -552,7 +552,14 @@ public class TileEntityRBMKRod extends TileEntityRBMKSlottedBase implements IRBM
 				PREFIX_VALUE + "columnheat",
 				PREFIX_VALUE + "rodheat",
 				PREFIX_VALUE + "depletion",
+<<<<<<< HEAD
 				PREFIX_VALUE + "xenon"
+=======
+				PREFIX_VALUE + "xenon",
+				PREFIX_VALUE + "fastflux",
+				PREFIX_VALUE + "slowflux",
+				PREFIX_VALUE + "flux"
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		};
 	}
 
@@ -564,6 +571,12 @@ public class TileEntityRBMKRod extends TileEntityRBMKSlottedBase implements IRBM
 			if((PREFIX_VALUE + "depletion").equals(name))	return "" + (int) (100 - ItemRBMKRod.getEnrichment(slots[0]) * 100);
 			if((PREFIX_VALUE + "xenon").equals(name))		return "" + (int) (ItemRBMKRod.getPoison(slots[0]));
 		}
+<<<<<<< HEAD
+=======
+		if((PREFIX_VALUE + "fastflux").equals(name))		return "" + (int) Math.ceil(fluxFromType(NType.FAST));
+		if((PREFIX_VALUE + "slowflux").equals(name))		return "" + (int) Math.ceil(fluxFromType(NType.SLOW));
+		if((PREFIX_VALUE + "flux").equals(name))			return "" + (int) Math.ceil(fluxFromType(NType.ANY));
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		return null;
 	}
 }

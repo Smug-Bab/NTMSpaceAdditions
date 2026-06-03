@@ -78,7 +78,10 @@ import com.hbm.items.armor.ItemArmorMod;
 import com.hbm.items.armor.ItemModDefuser;
 import com.hbm.items.armor.ItemModRevive;
 import com.hbm.items.armor.ItemModShackles;
+<<<<<<< HEAD
 import com.hbm.items.tool.ItemGuideBook.BookType;
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import com.hbm.items.weapon.sedna.BulletConfig;
 import com.hbm.items.weapon.sedna.ItemGunBaseNT;
 import com.hbm.items.weapon.sedna.factory.XFactory12ga;
@@ -221,7 +224,7 @@ public class ModEventHandler {
 				PacketDispatcher.wrapper.sendTo(new PlayerInformPacket("Press O to Duck!", ServerProxy.ID_DUCK, 30_000), (EntityPlayerMP) event.player);
 
 
-			if(GeneralConfig.enableGuideBook) {
+			/*if(GeneralConfig.enableGuideBook) {
 				HbmPlayerProps props = HbmPlayerProps.getData(event.player);
 
 				if(!props.hasReceivedBook) {
@@ -229,8 +232,7 @@ public class ModEventHandler {
 					event.player.inventoryContainer.detectAndSendChanges();
 					props.hasReceivedBook = true;
 				}
-			}
-
+			}*/
 
 			if(event.player.worldObj.getWorldInfo().getTerrainType() instanceof WorldTypeTeleport) {
 				HbmPlayerProps props = HbmPlayerProps.getData(event.player);
@@ -390,6 +392,7 @@ public class ModEventHandler {
 			}
 		}
 		CelestialBody body = CelestialBody.getBody(event.entity.worldObj);
+<<<<<<< HEAD
 
 		CBT_Invasion alien = body.getTrait(CBT_Invasion.class);
 		if(alien != null) {
@@ -426,54 +429,68 @@ public class ModEventHandler {
 			}
 		}
 
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
-		if(!event.entityLiving.worldObj.isRemote) {
+		CBT_Invasion alien = body.getTrait(CBT_Invasion.class);
+		if(alien != null) {
+			alien.onKill(event.entityLiving, body);
+		}
 
-			if(event.source==ModDamageSource.eve)
-			{
-				for(int i = -1; i < 2; i++) {
-					for(int j = -1; j < 2; j++) {
-						for(int k = -1; k < 2; k++) {
-							if(event.entityLiving.worldObj.getBlock((int)event.entityLiving.posX+i, (int)event.entityLiving.posY+j, (int)event.entityLiving.posZ+k)==Blocks.air)
-							{
-								if(ModBlocks.flesh_block.canPlaceBlockAt(event.entityLiving.worldObj, (int)event.entityLiving.posX+i, (int)event.entityLiving.posY+j, (int)event.entityLiving.posZ+k))
-								{
-									event.entityLiving.worldObj.setBlock((int)event.entityLiving.posX+i, (int)event.entityLiving.posY+j, (int)event.entityLiving.posZ+k, ModBlocks.flesh_block);
-								}
+
+		if(!event.entityLiving.worldObj.isRemote && event.source == ModDamageSource.eve) {
+			for(int i = -1; i < 2; i++) {
+				for(int j = -1; j < 2; j++) {
+					for(int k = -1; k < 2; k++) {
+						if(event.entityLiving.worldObj.getBlock((int)event.entityLiving.posX + i, (int)event.entityLiving.posY + j, (int)event.entityLiving.posZ + k) == Blocks.air) {
+							if(ModBlocks.flesh_block.canPlaceBlockAt(event.entityLiving.worldObj, (int)event.entityLiving.posX + i, (int)event.entityLiving.posY + j, (int)event.entityLiving.posZ + k)) {
+								event.entityLiving.worldObj.setBlock((int)event.entityLiving.posX + i, (int)event.entityLiving.posY + j, (int)event.entityLiving.posZ + k, ModBlocks.flesh_block);
 							}
 						}
 					}
 				}
 			}
+		}
+
+
+		if(!event.entityLiving.worldObj.isRemote && event.entityLiving.worldObj.getGameRules().getGameRuleBooleanValue("doMobLoot")) {
 
 			if(event.source instanceof EntityDamageSource && ((EntityDamageSource)event.source).getEntity() instanceof EntityPlayer
 					 && !(((EntityDamageSource)event.source).getEntity() instanceof FakePlayer)) {
 
-				if(event.entityLiving instanceof EntitySpider && event.entityLiving.getRNG().nextInt(500) == 0) {
+				Random rng = event.entityLiving.getRNG();
+				
+				if(event.entityLiving instanceof EntitySpider && rng.nextInt(500) == 0) {
 					event.entityLiving.dropItem(ModItems.spider_milk, 1);
 				}
 
-				if(event.entityLiving instanceof EntityCaveSpider && event.entityLiving.getRNG().nextInt(100) == 0) {
+				if(event.entityLiving instanceof EntityCaveSpider && rng.nextInt(100) == 0) {
 					event.entityLiving.dropItem(ModItems.serum, 1);
 				}
 
-				if(event.entityLiving instanceof EntityAnimal && event.entityLiving.getRNG().nextInt(500) == 0) {
+				if(event.entityLiving instanceof EntityAnimal && rng.nextInt(500) == 0) {
 					event.entityLiving.dropItem(ModItems.bandaid, 1);
 				}
 
 				if(event.entityLiving instanceof IMob) {
-					if(event.entityLiving.getRNG().nextInt(1000) == 0) event.entityLiving.dropItem(ModItems.heart_piece, 1);
-					if(event.entityLiving.getRNG().nextInt(250) == 0) event.entityLiving.dropItem(ModItems.key_red_cracked, 1);
-					if(event.entityLiving.getRNG().nextInt(250) == 0) event.entityLiving.dropItem(ModItems.launch_code_piece, 1);
+					if(rng.nextInt(1000) == 0) event.entityLiving.dropItem(ModItems.heart_piece, 1);
+					if(rng.nextInt(250) == 0) event.entityLiving.dropItem(ModItems.key_red_cracked, 1);
+					if(rng.nextInt(250) == 0) event.entityLiving.dropItem(ModItems.launch_code_piece, 1);
 				}
 
-				if(event.entityLiving instanceof EntityCyberCrab && event.entityLiving.getRNG().nextInt(500) == 0) {
+				if(event.entityLiving instanceof EntityCyberCrab && rng.nextInt(500) == 0) {
 					event.entityLiving.dropItem(ModItems.wd40, 1);
 				}
 
-				if(event.entityLiving instanceof EntityVillager&& event.entityLiving.getRNG().nextInt(1) == 0) {
+				if(event.entityLiving instanceof EntityVillager && event.entityLiving.getRNG().nextInt(1) == 0) {
 					event.entityLiving.dropItem(ModItems.flesh, 5);
-			}
+				}
+				
+				if(event.entityLiving instanceof EntityZombie) {
+					if(rng.nextInt(200) == 0) event.entityLiving.dropItem(ModItems.ingot_copper, 1);
+					if(rng.nextInt(200) == 0) event.entityLiving.dropItem(ModItems.ingot_aluminium, 1);
+					if(rng.nextInt(200) == 0) event.entityLiving.dropItem(ModItems.ingot_titanium, 1);
+				}
 		}
 	}
 }

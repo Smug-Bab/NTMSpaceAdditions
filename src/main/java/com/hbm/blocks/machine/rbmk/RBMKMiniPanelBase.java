@@ -1,7 +1,15 @@
 package com.hbm.blocks.machine.rbmk;
 
+<<<<<<< HEAD
 import org.lwjgl.opengl.GL11;
 
+=======
+import java.util.List;
+
+import org.lwjgl.opengl.GL11;
+
+import com.hbm.blocks.ITooltipProvider;
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import com.hbm.lib.Library;
 import com.hbm.render.block.ISBRHUniversal;
 import com.hbm.render.util.RenderBlocksNT;
@@ -14,16 +22,29 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.entity.EntityLivingBase;
+<<<<<<< HEAD
+=======
+import net.minecraft.entity.player.EntityPlayer;
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+<<<<<<< HEAD
 public class RBMKMiniPanelBase extends BlockContainer implements ISBRHUniversal {
 
 	public RBMKMiniPanelBase() {
 		super(Material.iron);
+=======
+public class RBMKMiniPanelBase extends BlockContainer implements ISBRHUniversal, ITooltipProvider {
+
+	public RBMKMiniPanelBase() {
+		super(Material.iron);
+		this.setHardness(3F);
+		this.setResistance(30F);
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	}
 
 	@Override
@@ -90,4 +111,12 @@ public class RBMKMiniPanelBase extends BlockContainer implements ISBRHUniversal 
 		
 		return true;
 	}
+<<<<<<< HEAD
+=======
+
+	@Override
+	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean ext) {
+		this.addStandardInfo(stack, player, list, ext);
+	}
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 }

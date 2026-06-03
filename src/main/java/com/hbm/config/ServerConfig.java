@@ -21,7 +21,10 @@ public class ServerConfig extends RunningConfig {
 	public static ConfigWrapper<Boolean> CRATE_KEEP_CONTENTS =			new ConfigWrapper(true);
 	public static ConfigWrapper<Integer> ITEM_HAZARD_DROP_TICKRATE =	new ConfigWrapper(2);
 	public static ConfigWrapper<Boolean> ENABLE_MKU =					new ConfigWrapper(true);
+<<<<<<< HEAD
 	public static ConfigWrapper<Boolean> LEGACY_CRUCIBLE_RULES =		new ConfigWrapper(false);
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 	private static void initDefaults() {
 		configMap.put("DAMAGE_COMPATIBILITY_MODE", DAMAGE_COMPATIBILITY_MODE);
@@ -35,7 +38,10 @@ public class ServerConfig extends RunningConfig {
 		configMap.put("CRATE_KEEP_CONTENTS", CRATE_KEEP_CONTENTS);
 		configMap.put("ITEM_HAZARD_DROP_TICKRATE", ITEM_HAZARD_DROP_TICKRATE);
 		configMap.put("ENABLE_MKU", ENABLE_MKU);
+<<<<<<< HEAD
 		configMap.put("LEGACY_CRUCIBLE_RULES", LEGACY_CRUCIBLE_RULES);
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	}
 
 	/** Initializes defaults, then reads the config file if it exists, then writes the config file. */

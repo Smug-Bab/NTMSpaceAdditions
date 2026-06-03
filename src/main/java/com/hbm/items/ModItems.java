@@ -33,9 +33,14 @@ import com.hbm.items.tool.*;
 import com.hbm.items.tool.ItemToolAbility.EnumToolType;
 import com.hbm.items.weapon.*;
 import com.hbm.items.weapon.ItemCustomMissilePart.*;
+<<<<<<< HEAD
 import com.hbm.items.weapon.ItemMissile.MissileFormFactor;
 import com.hbm.items.weapon.ItemMissile.MissileFuel;
 import com.hbm.items.weapon.ItemMissile.MissileTier;
+=======
+import com.hbm.items.weapon.ItemMissile.*;
+import com.hbm.items.weapon.grenade.*;
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import com.hbm.items.weapon.sedna.factory.GunFactory;
 import com.hbm.lib.RefStrings;
 import com.hbm.main.MainRegistry;
@@ -1318,11 +1323,18 @@ public class ModItems {
 	public static Item radar_linker;
 	public static Item settings_tool;
 	public static Item atmosphere_scanner;
+<<<<<<< HEAD
 
 	public static Item blueprints;
 	public static Item blueprint_folder;
 	public static Item template_folder;
 	public static Item crucible_template;
+=======
+	public static Item rtty_pager;
+
+	public static Item blueprints;
+	public static Item blueprint_folder;
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	public static Item fluid_identifier_multi;
 	public static Item fluid_icon;
 	public static Item siren_track;
@@ -1648,6 +1660,7 @@ public class ModItems {
 	public static Item stick_semtex;
 	public static Item stick_c4;
 
+<<<<<<< HEAD
 	public static Item grenade_generic;
 	public static Item grenade_strong;
 	public static Item grenade_frag;
@@ -1696,6 +1709,16 @@ public class ModItems {
 
 	public static Item nuclear_waste_pearl;
 
+=======
+	public static Item grenade_shell;
+	public static Item grenade_filling;
+	public static Item grenade_fuze;
+	public static Item grenade_extra;
+	public static Item grenade_universal;
+	
+	public static Item ullapool_caber;
+
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	public static Item weaponized_starblaster_cell;
 
 	public static Item bomb_waffle;
@@ -2261,7 +2284,10 @@ public class ModItems {
 	public static Item tsar_kit;
 	public static Item multi_kit;
 	public static Item custom_kit;
+<<<<<<< HEAD
 	public static Item grenade_kit;
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	public static Item fleija_kit;
 	public static Item prototype_kit;
 	public static Item missile_kit;
@@ -2384,6 +2410,10 @@ public class ModItems {
 	public static Item orange7;
 	public static Item orange8;
 
+<<<<<<< HEAD
+=======
+	public static Item template_folder;
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	public static Item nothing;
 	public static Item broken_item;
 
@@ -4122,12 +4152,17 @@ public class ModItems {
 		ToolMaterial matCrucible = EnumHelper.addToolMaterial("CRUCIBLE", 10, 3, 50.0F, 100.0F, 0);
 		crucible = new ItemCrucible(5000, 1F, matCrucible).setUnlocalizedName("crucible").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":crucible");
 
+<<<<<<< HEAD
 		stick_dynamite = new ItemGrenade(3).setUnlocalizedName("stick_dynamite").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":stick_dynamite");
+=======
+		stick_dynamite = new ItemGrenadeDynamite(3).setUnlocalizedName("stick_dynamite").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":stick_dynamite");
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		stick_dynamite_fishing = new ItemGrenadeFishing(3).setUnlocalizedName("stick_dynamite_fishing").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":stick_dynamite_fishing");
 		stick_tnt = new Item().setUnlocalizedName("stick_tnt").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":stick_tnt");
 		stick_semtex = new Item().setUnlocalizedName("stick_semtex").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":stick_semtex");
 		stick_c4 = new Item().setUnlocalizedName("stick_c4").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":stick_c4");
 
+<<<<<<< HEAD
 		grenade_generic = new ItemGrenade(4).setUnlocalizedName("grenade_generic").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":grenade_generic");
 		grenade_strong = new ItemGrenade(5).setUnlocalizedName("grenade_strong").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":grenade_strong");
 		grenade_frag = new ItemGrenade(4).setUnlocalizedName("grenade_frag").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":grenade_frag_alt");
@@ -4175,6 +4210,16 @@ public class ModItems {
 		grenade_burst = new ItemGrenade(1).setUnlocalizedName("grenade_burst").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":grenade_burst");
 		nuclear_waste_pearl = new ItemGrenade(-1).setUnlocalizedName("nuclear_waste_pearl").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":nuclear_waste_pearl");
 
+=======
+		grenade_shell = new ItemGrenadeShell().setUnlocalizedName("grenade_shell").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":grenade_shell");
+		grenade_filling = new ItemGrenadeFilling().setUnlocalizedName("grenade_filling").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":grenade_filling");
+		grenade_fuze = new ItemGrenadeFuze().setUnlocalizedName("grenade_fuze").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":grenade_fuze");
+		grenade_extra = new ItemGrenadeExtra().setUnlocalizedName("grenade_extra").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":grenade_extra");
+		grenade_universal = new ItemGrenadeUniversal().setUnlocalizedName("grenade_universal").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":grenade_universal");
+
+		ullapool_caber = new WeaponSpecial(MainRegistry.tMatSteel).setUnlocalizedName("ullapool_caber").setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":ullapool_caber");
+
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		weaponized_starblaster_cell = new WeaponizedCell().setUnlocalizedName("weaponized_starblaster_cell").setMaxStackSize(1).setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":gun_b92_ammo_weaponized");
 
 		bomb_waffle = new ItemWaffle(20, false).setUnlocalizedName("bomb_waffle").setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":bomb_waffle");
@@ -4292,7 +4337,11 @@ public class ModItems {
 		battery_pack = new ItemBatteryPack().setUnlocalizedName("battery_pack").setTextureName(RefStrings.MODID + ":battery_generic_new");
 		battery_creative = new ItemBatteryCreative().setUnlocalizedName("battery_creative").setMaxStackSize(1).setCreativeTab(MainRegistry.controlTab).setTextureName(RefStrings.MODID + ":battery_creative_new");
 		cube_power = new ItemBattery(1000000000000000000L, 1000000000000000L, 1000000000000000L).setUnlocalizedName("cube_power").setMaxStackSize(1).setCreativeTab(MainRegistry.controlTab).setTextureName(RefStrings.MODID + ":cube_power");
+<<<<<<< HEAD
 		core_angel = new ItemBattery(16_000_000L, 16_000_000L, 800_000L).setUnlocalizedName("core_angel").setMaxStackSize(1).setCreativeTab(MainRegistry.controlTab).setTextureName(RefStrings.MODID + ":core_angel");
+=======
+		core_angel = new ItemBattery(16_000_000L, 16_000_000L, 800_000L).setUnlocalizedName("core_angel").setMaxStackSize(1).setCreativeTab(MainRegistry.controlTab).setTextureName(RefStrings.MODID + ":battery_generic_new");
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 		battery_sc_uranium = new ItemSelfcharger(5).setUnlocalizedName("battery_sc_uranium").setMaxStackSize(1).setCreativeTab(null).setTextureName(RefStrings.MODID + ":battery_sc_uranium");
 		battery_sc_technetium = new ItemSelfcharger(25).setUnlocalizedName("battery_sc_technetium").setMaxStackSize(1).setCreativeTab(null).setTextureName(RefStrings.MODID + ":battery_sc_technetium");
@@ -4394,7 +4443,10 @@ public class ModItems {
 		tsar_kit = new ItemStarterKit().setUnlocalizedName("tsar_kit").setMaxStackSize(1).setCreativeTab(MainRegistry.nukeTab).setTextureName(RefStrings.MODID + ":tsar_kit");
 		multi_kit = new ItemStarterKit().setUnlocalizedName("multi_kit").setMaxStackSize(1).setCreativeTab(MainRegistry.nukeTab).setTextureName(RefStrings.MODID + ":multi_kit");
 		custom_kit = new ItemStarterKit().setUnlocalizedName("custom_kit").setMaxStackSize(1).setCreativeTab(MainRegistry.nukeTab).setTextureName(RefStrings.MODID + ":custom_kit");
+<<<<<<< HEAD
 		grenade_kit = new ItemStarterKit().setUnlocalizedName("grenade_kit").setMaxStackSize(1).setCreativeTab(MainRegistry.weaponTab).setTextureName(RefStrings.MODID + ":grenade_kit");
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		fleija_kit = new ItemStarterKit().setUnlocalizedName("fleija_kit").setMaxStackSize(1).setCreativeTab(MainRegistry.nukeTab).setTextureName(RefStrings.MODID + ":fleija_kit");
 		prototype_kit = new ItemStarterKit().setUnlocalizedName("prototype_kit").setMaxStackSize(1).setCreativeTab(MainRegistry.nukeTab).setTextureName(RefStrings.MODID + ":prototype_kit");
 		missile_kit = new ItemStarterKit().setUnlocalizedName("missile_kit").setMaxStackSize(1).setCreativeTab(MainRegistry.missileTab).setTextureName(RefStrings.MODID + ":missile_kit");
@@ -4451,11 +4503,19 @@ public class ModItems {
 		radar_linker = new ItemRadarLinker().setUnlocalizedName("radar_linker").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":radar_linker");
 		settings_tool = new ItemSettingsTool().setUnlocalizedName("settings_tool").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":settings_tool");
 		atmosphere_scanner = new ItemAtmosphereScanner().setUnlocalizedName("atmosphere_scanner").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":atmosphere_scanner");
+<<<<<<< HEAD
+=======
+		rtty_pager = new ItemRTTYPager().setUnlocalizedName("rtty_pager").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":rtty_pager");
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 		key = new ItemKey().setUnlocalizedName("key").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":key");
 		key_red = new ItemCustomLore().setUnlocalizedName("key_red").setMaxStackSize(1).setCreativeTab(null).setTextureName(RefStrings.MODID + ":key_red");
 		key_red_cracked = new ItemCustomLore().setUnlocalizedName("key_red_cracked").setMaxStackSize(1).setCreativeTab(null).setTextureName(RefStrings.MODID + ":key_red_cracked");
+<<<<<<< HEAD
 		key_kit = new ItemCounterfitKeys().setUnlocalizedName("key_kit").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":key_pair");
+=======
+		key_kit = new ItemCounterfeitKeys().setUnlocalizedName("key_kit").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":key_pair");
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		key_fake = new ItemKey().setUnlocalizedName("key_fake").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":key_gold");
 		pin = new ItemCustomLore().setUnlocalizedName("pin").setMaxStackSize(8).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":pin");
 		padlock_rusty = new ItemLock(1).setUnlocalizedName("padlock_rusty").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":padlock_rusty");
@@ -4467,8 +4527,11 @@ public class ModItems {
 
 		blueprints = new ItemBlueprints().setUnlocalizedName("blueprints").setCreativeTab(MainRegistry.templateTab).setTextureName(RefStrings.MODID + ":blueprints");
 		blueprint_folder = new ItemBlueprintFolder().setUnlocalizedName("blueprint_folder").setCreativeTab(MainRegistry.templateTab).setTextureName(RefStrings.MODID + ":blueprint_folder");
+<<<<<<< HEAD
 		template_folder = new ItemTemplateFolder().setUnlocalizedName("template_folder").setMaxStackSize(1).setCreativeTab(MainRegistry.templateTab).setTextureName(RefStrings.MODID + ":template_folder");
 		crucible_template = new ItemCrucibleTemplate().setUnlocalizedName("crucible_template").setMaxStackSize(1).setCreativeTab(MainRegistry.templateTab).setTextureName(RefStrings.MODID + ":crucible_template");
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		fluid_identifier_multi = new ItemFluidIDMulti().setUnlocalizedName("fluid_identifier_multi").setMaxStackSize(1).setCreativeTab(MainRegistry.templateTab).setTextureName(RefStrings.MODID + ":fluid_identifier_multi");
 		fluid_icon = new ItemFluidIcon().setUnlocalizedName("fluid_icon").setCreativeTab(null).setTextureName(RefStrings.MODID + ":fluid_icon");
 		fluid_tank_empty = new Item().setUnlocalizedName("fluid_tank_empty").setCreativeTab(MainRegistry.controlTab).setTextureName(RefStrings.MODID + ":fluid_tank");
@@ -5028,6 +5091,10 @@ public class ModItems {
 		orange7 = new Item().setUnlocalizedName("orange7").setTextureName(RefStrings.MODID + ":orange7");
 		orange8 = new Item().setUnlocalizedName("orange8").setTextureName(RefStrings.MODID + ":orange8");
 
+<<<<<<< HEAD
+=======
+		template_folder = new Item().setUnlocalizedName("template_folder").setTextureName(RefStrings.MODID + ":template_folder");
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		nothing = new Item().setUnlocalizedName("nothing").setTextureName(RefStrings.MODID + ":nothing");
 		broken_item = new BrokenItem().setUnlocalizedName("broken_item").setTextureName(RefStrings.MODID + ":broken_item");
 
@@ -5949,7 +6016,10 @@ public class ModItems {
 		//Folders
 		GameRegistry.registerItem(blueprints, blueprints.getUnlocalizedName());
 		GameRegistry.registerItem(blueprint_folder, blueprint_folder.getUnlocalizedName());
+<<<<<<< HEAD
 		GameRegistry.registerItem(template_folder, template_folder.getUnlocalizedName());
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		GameRegistry.registerItem(bobmazon, bobmazon.getUnlocalizedName());
 		GameRegistry.registerItem(bobmazon_hidden, bobmazon_hidden.getUnlocalizedName());
 
@@ -6033,7 +6103,10 @@ public class ModItems {
 		GameRegistry.registerItem(fluid_identifier_multi, fluid_identifier_multi.getUnlocalizedName());
 		GameRegistry.registerItem(fluid_icon, fluid_icon.getUnlocalizedName());
 		GameRegistry.registerItem(fluid_duct, fluid_duct.getUnlocalizedName());
+<<<<<<< HEAD
 		GameRegistry.registerItem(crucible_template, crucible_template.getUnlocalizedName());
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 		//Machine Items
 		GameRegistry.registerItem(fuse, fuse.getUnlocalizedName());
@@ -6321,6 +6394,10 @@ public class ModItems {
 		GameRegistry.registerItem(analysis_tool, analysis_tool.getUnlocalizedName());
 		GameRegistry.registerItem(coupling_tool, coupling_tool.getUnlocalizedName());
 		GameRegistry.registerItem(settings_tool, settings_tool.getUnlocalizedName());
+<<<<<<< HEAD
+=======
+		GameRegistry.registerItem(rtty_pager, rtty_pager.getUnlocalizedName());
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		GameRegistry.registerItem(dosimeter, dosimeter.getUnlocalizedName());
 		GameRegistry.registerItem(geiger_counter, geiger_counter.getUnlocalizedName());
 		GameRegistry.registerItem(digamma_diagnostic, digamma_diagnostic.getUnlocalizedName());
@@ -6653,6 +6730,7 @@ public class ModItems {
 		GameRegistry.registerItem(stick_tnt, stick_tnt.getUnlocalizedName());
 		GameRegistry.registerItem(stick_semtex, stick_semtex.getUnlocalizedName());
 		GameRegistry.registerItem(stick_c4, stick_c4.getUnlocalizedName());
+<<<<<<< HEAD
 		GameRegistry.registerItem(grenade_generic, grenade_generic.getUnlocalizedName());
 		GameRegistry.registerItem(grenade_strong, grenade_strong.getUnlocalizedName());
 		GameRegistry.registerItem(grenade_frag, grenade_frag.getUnlocalizedName());
@@ -6697,6 +6775,14 @@ public class ModItems {
 		GameRegistry.registerItem(grenade_if_hopwire, grenade_if_hopwire.getUnlocalizedName());
 		GameRegistry.registerItem(grenade_if_null, grenade_if_null.getUnlocalizedName());
 		GameRegistry.registerItem(nuclear_waste_pearl, nuclear_waste_pearl.getUnlocalizedName());
+=======
+
+		GameRegistry.registerItem(grenade_shell, grenade_shell.getUnlocalizedName());
+		GameRegistry.registerItem(grenade_filling, grenade_filling.getUnlocalizedName());
+		GameRegistry.registerItem(grenade_fuze, grenade_fuze.getUnlocalizedName());
+		GameRegistry.registerItem(grenade_extra, grenade_extra.getUnlocalizedName());
+		GameRegistry.registerItem(grenade_universal, grenade_universal.getUnlocalizedName());
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 		//Disperser Canister
 		GameRegistry.registerItem(disperser_canister_empty, disperser_canister_empty.getUnlocalizedName());
@@ -7318,7 +7404,10 @@ public class ModItems {
 		GameRegistry.registerItem(multi_kit, multi_kit.getUnlocalizedName());
 		GameRegistry.registerItem(custom_kit, custom_kit.getUnlocalizedName());
 		GameRegistry.registerItem(missile_kit, missile_kit.getUnlocalizedName());
+<<<<<<< HEAD
 		GameRegistry.registerItem(grenade_kit, grenade_kit.getUnlocalizedName());
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		GameRegistry.registerItem(hazmat_kit, hazmat_kit.getUnlocalizedName());
 		GameRegistry.registerItem(hazmat_red_kit, hazmat_red_kit.getUnlocalizedName());
 		GameRegistry.registerItem(hazmat_grey_kit, hazmat_grey_kit.getUnlocalizedName());
@@ -7406,6 +7495,10 @@ public class ModItems {
 
 		GameRegistry.registerItem(swarm_member, swarm_member.getUnlocalizedName());
 
+<<<<<<< HEAD
+=======
+		GameRegistry.registerItem(template_folder, template_folder.getUnlocalizedName());
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		GameRegistry.registerItem(nothing, nothing.getUnlocalizedName());
 		GameRegistry.registerItem(broken_item, broken_item.getUnlocalizedName());
 	}

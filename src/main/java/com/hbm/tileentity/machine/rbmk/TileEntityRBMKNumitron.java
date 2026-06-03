@@ -1,5 +1,9 @@
 package com.hbm.tileentity.machine.rbmk;
 
+<<<<<<< HEAD
+=======
+import com.hbm.handler.CompatHandler;
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import com.hbm.interfaces.IControlReceiver;
 import com.hbm.inventory.gui.GUIScreenRBMKDisplay;
 import com.hbm.tileentity.IGUIProvider;
@@ -8,13 +12,27 @@ import com.hbm.tileentity.network.RTTYSystem;
 import com.hbm.tileentity.network.RTTYSystem.RTTYChannel;
 import com.hbm.util.BufferUtil;
 
+<<<<<<< HEAD
 import io.netty.buffer.ByteBuf;
+=======
+import cpw.mods.fml.common.Optional;
+import io.netty.buffer.ByteBuf;
+import li.cil.oc.api.machine.Arguments;
+import li.cil.oc.api.machine.Callback;
+import li.cil.oc.api.machine.Context;
+import li.cil.oc.api.network.SimpleComponent;
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
+<<<<<<< HEAD
 public class TileEntityRBMKNumitron extends TileEntityLoadedBase implements IGUIProvider, IControlReceiver {
+=======
+@Optional.InterfaceList({@Optional.Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = "OpenComputers")})
+public class TileEntityRBMKNumitron extends TileEntityLoadedBase implements IGUIProvider, IControlReceiver, SimpleComponent, CompatHandler.OCComponent {
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	
 	/*    __________
 	 *   /         /|
@@ -78,7 +96,11 @@ public class TileEntityRBMKNumitron extends TileEntityLoadedBase implements IGUI
 		/** What channel to read values from */
 		public String rtty = "";
 		/** The current read value on the display */
+<<<<<<< HEAD
 		public int value;
+=======
+		public long value;
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		/** Whether this display is visible on the panel */
 		public boolean active;
 		
@@ -91,13 +113,21 @@ public class TileEntityRBMKNumitron extends TileEntityLoadedBase implements IGUI
 			if(rtty == null || rtty.isEmpty()) return;
 			
 			RTTYChannel chan = RTTYSystem.listen(worldObj, rtty);
+<<<<<<< HEAD
 			int sigVal = 0;
+=======
+			long sigVal = 0;
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 			
 			if(chan != null && chan.timeStamp < worldObj.getTotalWorldTime() - 1) chan = null;
 			
 			// always accept new signals
 			if(chan != null && chan.signal != null) {
+<<<<<<< HEAD
 				try { sigVal = Integer.parseInt(chan.signal.toString()); } catch(Exception ex) { }
+=======
+				try { sigVal = Long.parseLong(chan.signal.toString()); } catch(Exception ex) { }
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 				this.value = sigVal;
 			} else {
 				// if there's no new signal and we're polling, set to 0
@@ -110,7 +140,11 @@ public class TileEntityRBMKNumitron extends TileEntityLoadedBase implements IGUI
 			buf.writeBoolean(polling);
 			BufferUtil.writeString(buf, label);
 			BufferUtil.writeString(buf, rtty);
+<<<<<<< HEAD
 			buf.writeInt(value);
+=======
+			buf.writeLong(value);
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		}
 
 		public void deserialize(ByteBuf buf) {
@@ -118,7 +152,11 @@ public class TileEntityRBMKNumitron extends TileEntityLoadedBase implements IGUI
 			polling = buf.readBoolean();
 			label = BufferUtil.readString(buf);
 			rtty = BufferUtil.readString(buf);
+<<<<<<< HEAD
 			value = buf.readInt();
+=======
+			value = buf.readLong();
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		}
 
 		public void readFromNBT(NBTTagCompound nbt, int index) {
@@ -126,7 +164,11 @@ public class TileEntityRBMKNumitron extends TileEntityLoadedBase implements IGUI
 			this.polling = nbt.getBoolean("polling" + index);
 			this.label = nbt.getString("label" + index);
 			this.rtty = nbt.getString("rtty" + index);
+<<<<<<< HEAD
 			this.value = nbt.getInteger("value" + index);
+=======
+			this.value = nbt.getLong("value" + index);
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		}
 
 		public void writeToNBT(NBTTagCompound nbt, int index) {
@@ -134,7 +176,11 @@ public class TileEntityRBMKNumitron extends TileEntityLoadedBase implements IGUI
 			nbt.setBoolean("polling" + index, polling);
 			nbt.setString("label" + index, label);
 			nbt.setString("rtty" + index, rtty);
+<<<<<<< HEAD
 			nbt.setInteger("value" + index, value);
+=======
+			nbt.setLong("value" + index, value);
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		}
 	}
 
@@ -162,4 +208,79 @@ public class TileEntityRBMKNumitron extends TileEntityLoadedBase implements IGUI
 			display.rtty = data.getString("rtty" + i);
 		}
 	}
+<<<<<<< HEAD
+=======
+
+	// OpenComputers methods
+	@Override
+	@Optional.Method(modid = "OpenComputers")
+	public String getComponentName() {
+		return "rbmk_numitron";
+	}
+
+	@Callback(direct = true)
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] getDisplayInfo(Context context, Arguments args) {
+		int idx = args.checkInteger(0) - 1;
+		if(idx < 0 || idx >= 2) return new Object[] {null, "Invalid index (1-2)"};
+		java.util.LinkedHashMap<String, Object> map = new java.util.LinkedHashMap<>();
+		map.put("active", displays[idx].active);
+		map.put("polling", displays[idx].polling);
+		map.put("label", displays[idx].label);
+		map.put("channel", displays[idx].rtty);
+		map.put("value", displays[idx].value);
+		return new Object[] {map};
+	}
+
+	@Callback(direct = true, limit = 2)
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] setDisplayActive(Context context, Arguments args) {
+		int idx = args.checkInteger(0) - 1;
+		if(idx < 0 || idx >= 2) return new Object[] {false, "Invalid index (1-2)"};
+		displays[idx].active = args.checkBoolean(1);
+		markDirty();
+		return new Object[] {true};
+	}
+
+	@Callback(direct = true, limit = 2)
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] setDisplayPolling(Context context, Arguments args) {
+		int idx = args.checkInteger(0) - 1;
+		if(idx < 0 || idx >= 2) return new Object[] {false, "Invalid index (1-2)"};
+		displays[idx].polling = args.checkBoolean(1);
+		markDirty();
+		return new Object[] {true};
+	}
+
+	@Callback(direct = true, limit = 2)
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] setDisplayLabel(Context context, Arguments args) {
+		int idx = args.checkInteger(0) - 1;
+		if(idx < 0 || idx >= 2) return new Object[] {false, "Invalid index (1-2)"};
+		displays[idx].label = args.checkString(1);
+		markDirty();
+		return new Object[] {true};
+	}
+
+	@Callback(direct = true, limit = 2)
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] setDisplayChannel(Context context, Arguments args) {
+		int idx = args.checkInteger(0) - 1;
+		if(idx < 0 || idx >= 2) return new Object[] {false, "Invalid index (1-2)"};
+		displays[idx].rtty = args.checkString(1);
+		markDirty();
+		return new Object[] {true};
+	}
+
+	@Callback(direct = true, limit = 2)
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] setDisplayValue(Context context, Arguments args) {
+		int idx = args.checkInteger(0) - 1;
+		if(idx < 0 || idx >= 2) return new Object[] {false, "Invalid index (1-2)"};
+		long val = (long) args.checkInteger(1);
+		displays[idx].value = val;
+		markDirty();
+		return new Object[] {true};
+	}
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 }

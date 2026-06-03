@@ -209,14 +209,22 @@ public class TileEntityRBMKControlManual extends TileEntityRBMKControl implement
 
 		if((PREFIX_FUNCTION + "setrods").equals(name) && params.length > 0) {
 			int percent = IRORInteractive.parseInt(params[0], 0, 100);
+<<<<<<< HEAD
 			this.targetLevel = percent / 100D;
+=======
+			this.setTarget(percent / 100D);
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 			this.markDirty();
 			return null;
 		}
 
 		if((PREFIX_FUNCTION + "extendrods").equals(name) && params.length > 0) {
 			int percent = IRORInteractive.parseInt(params[0], -100, 100);
+<<<<<<< HEAD
 			this.targetLevel = MathHelper.clamp_double(this.targetLevel + percent / 100D, 0D, 1D);
+=======
+			this.setTarget(MathHelper.clamp_double(this.targetLevel + percent / 100D, 0D, 1D));
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 			this.markDirty();
 			return null;
 		}

@@ -841,8 +841,11 @@ damage.category.EXPL=爆炸
 damage.category.FIRE=火焰
 damage.exact.drown=溺水
 damage.exact.fall=摔落
+<<<<<<< HEAD
 damage.exact.LASER=激光
 damage.exact.onFire=灼烧伤害
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 damage.other=其他
 death.attack.acid=%1$s 掉进了酸里
 death.attack.acidPlayer=%1$s 被 %2$s 溶解
@@ -2707,6 +2710,7 @@ item.glowing_stew.name=发光真菌煲
 item.glyphid_meat.name=异虫肉
 item.glyphid_meat_grilled.name=熟异虫肉
 item.goggles.name=护目镜
+<<<<<<< HEAD
 item.grenade_aschrab.name=可抛反Sa326
 item.grenade_black_hole.name=黑洞手榴弹
 item.grenade_breach.name=破甲手榴弹
@@ -2751,6 +2755,8 @@ item.grenade_smart.name=智能手榴弹
 item.grenade_strong.name=增强型手榴弹
 item.grenade_tau.name=陶子手榴弹
 item.grenade_zomg.name=负能量湮灭手榴弹
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 item.glyphid_gland.name=囊腺
 item.glyphid_gland_empty.name=异虫腺体
 item.gun_aberrator.name=离散者
@@ -4369,6 +4375,7 @@ item.twinkie.name=小蛋糕
 item.ullapool_caber.name=阿勒浦长木杆
 item.undefined.name=形态未定义物质
 item.upgrade_5g.name=5G辐射发射器升级
+<<<<<<< HEAD
 item.upgrade_afterburn_1.name=一级加力燃烧升级
 item.upgrade_afterburn_2.name=二级加力燃烧升级
 item.upgrade_afterburn_3.name=三级加力燃烧升级
@@ -4383,6 +4390,22 @@ item.upgrade_ejector_3.name=三级弹射速度升级
 item.upgrade_fortune_1.name=一级时运升级
 item.upgrade_fortune_2.name=二级时运升级
 item.upgrade_fortune_3.name=三级时运升级
+=======
+item.upgrade_afterburn_1.name=一级粉色机器升级
+item.upgrade_afterburn_2.name=二级粉色机器升级
+item.upgrade_afterburn_3.name=三级粉色机器升级
+item.upgrade_centrifuge.name=采矿激光升级-自动离心
+item.upgrade_crystallizer.name=采矿激光升级-自动结晶
+item.upgrade_effect_1.name=一级绿色机器升级
+item.upgrade_effect_2.name=二级绿色机器升级
+item.upgrade_effect_3.name=三级绿色机器升级
+item.upgrade_ejector_1.name=一级弹射速度升级
+item.upgrade_ejector_2.name=二级弹射速度升级
+item.upgrade_ejector_3.name=三级弹射速度升级
+item.upgrade_fortune_1.name=一级紫色机器升级
+item.upgrade_fortune_2.name=二级紫色机器升级
+item.upgrade_fortune_3.name=三级紫色机器升级
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 item.upgrade_gc_speed.name=气体离心机超频升级
 item.upgrade_health.name=粉色力场发生器升级
 item.upgrade_muffler.name=消音器
@@ -4390,16 +4413,28 @@ item.upgrade_nullifier.name=采矿激光升级-自动销毁
 item.upgrade_overdrive_1.name=一级超速传动机器升级
 item.upgrade_overdrive_2.name=二级超速传动机器升级
 item.upgrade_overdrive_3.name=三级超速传动机器升级
+<<<<<<< HEAD
 item.upgrade_power_1.name=一级节能升级
 item.upgrade_power_2.name=二级节能升级
 item.upgrade_power_3.name=三级节能升级
+=======
+item.upgrade_power_1.name=一级蓝色机器升级
+item.upgrade_power_2.name=二级蓝色机器升级
+item.upgrade_power_3.name=三级蓝色机器升级
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 item.upgrade_radius.name=青色力场发生器升级
 item.upgrade_screm.name=采矿激光升级-目 力 科 学 家
 item.upgrade_shredder.name=采矿激光升级-自动粉碎
 item.upgrade_smelter.name=采矿激光升级-自动熔炼
+<<<<<<< HEAD
 item.upgrade_speed_1.name=一级速度升级
 item.upgrade_speed_2.name=二级速度升级
 item.upgrade_speed_3.name=三级速度升级
+=======
+item.upgrade_speed_1.name=一级红色机器升级
+item.upgrade_speed_2.name=二级红色机器升级
+item.upgrade_speed_3.name=三级红色机器升级
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 item.upgrade_stack_1.name=一级堆叠弹出升级
 item.upgrade_stack_2.name=二级堆叠弹出升级
 item.upgrade_stack_3.name=三级堆叠弹出升级
@@ -4677,11 +4712,14 @@ shape.wireFine=线
 shape.wireDense=致密线
 shape.wiresDense=致密线
 soundCategory.ntmMachines=NTM机器
+<<<<<<< HEAD
 
 tile.rad_absorber.base.name=辐射吸收器
 tile.rad_absorber.red.name=增强型辐射吸收器
 tile.rad_absorber.green.name=高级辐射吸收器
 tile.rad_absorber.pink.name=精英辐射吸收器
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 stat.ntmBullets=Rounds Fired
 stat.ntmLegendary=Legendary Items Created
 stat.ntmMines=Mines Stepped on
@@ -6052,6 +6090,7 @@ desc.gui.upgrade.overdrive=*§7超速§r：堆叠至3级
 desc.gui.upgrade.power=*§1节能§r：堆叠至3级
 desc.gui.upgrade.speed=*§4速度§r：堆叠至3级
 item.heavy_component.name=重型组件
+<<<<<<< HEAD
 container.paDetector=粒子探测器
 container.paDipole=双极磁铁
 container.paQuadrupole=四极磁铁
@@ -6268,6 +6307,8 @@ hbm.key.ability=循环工具能力
 hbm.key.abilityAlt=配置工具能力
 hbm.key.toggleMagnet=开关磁铁
 upgrade.speed=工作速度 %s
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 container.machineChemicalFactory=大型化工厂
 item.rangefinder.name=测距仪
 tile.fluid_duct_paintable_block_exhaust.name=可涂漆排气管
@@ -6577,8 +6618,13 @@ tile.fusion_component.blanket.name=聚变反应堆内部覆层
 tile.fusion_component.bscco_welded.name=BSCCO超导线圈 (焊接)
 tile.fusion_component.motor.name=聚变反应堆线路管道
 tile.fusion_coupler.name=聚变反应堆等离子体耦合器
+<<<<<<< HEAD
 tile.fusion_coupler.desc=将等离子体输出的能量转化为速调管能量。$可以用于点燃第二个等离子体容器中的等离子体。
 tile.fusion_klystron.name=速调管
+=======
+tile.fusion_coupler.desc=将等离子体输出的能量转化为调速管能量。$可以用于点燃第二个等离子体容器中的等离子体。
+tile.fusion_klystron.name=调速管
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 tile.fusion_klystron.desc=聚变反应堆的动力源。$使用压缩空气进行冷却。
 tile.fusion_mhdt.name=磁流体涡轮发电机
 tile.fusion_mhdt.desc=直接将等离子体能量转化成电力。$效率要比传统锅炉高。$需要冷却！
@@ -6978,6 +7024,13 @@ item.rp_f_20_1.name=20号1m燃料罐
 item.rp_l_20.name=着陆支架
 item.sat_dyson_relay.name=卫星雷达中继器
 item.sat.desc.frequency=卫星频率
+<<<<<<< HEAD
+=======
+item.sat.desc.owner=卫星所有者
+item.sat.desc.inclination=卫星倾角
+item.sat.desc.altitude=卫星高度
+item.sat.desc.speed=卫星速度
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 item.sat.desc.foeq=给你一个成就，仅此而已。
 item.sat.desc.gerald.single_use=一次性使用。
 item.sat.desc.gerald.orbital_module=联盟号轨道舱
@@ -7197,7 +7250,10 @@ tile.orrery.name=全息太阳系图
 tile.plant_flower.strawberry.name=野生草莓
 tile.plant_flower.mint.name=野薄荷
 tile.propulsion_creative.name=创造模式空间站推进器
+<<<<<<< HEAD
 tile.rbmk_burner.name=RBMK流体燃烧器
+=======
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 tile.dish_control.name=行星雷达远程访问控制台
 tile.dish_control.desc=启用行星雷达的远程控制台。$按住shift键右键单击带有反应堆遥感器的行星雷达进行连接。$最后shift键右键单击控制台来完成连接。
 tile.gas_dock.name=气体巨行星大气采集器
@@ -7302,6 +7358,7 @@ tile.machine_battery_socket.desc=让电池物品能够直接接入电网。$同�
 tile.machine_crucible.desc=传热速率：ΔT*0.25 TU/T
 tile.machine_htrf4neo.name=HTR-F4 NEO 空间站推进器
 tile.machine_htrf4neo.desc=连接一个运行中的聚变反应堆以提供动力
+<<<<<<< HEAD
 item.battery_sc.am241.name=镅-241自充电电池
 item.battery_sc.au198.name=金-198自充电电池
 item.battery_sc.co60.name=钴-60自充电电池
@@ -7327,6 +7384,13 @@ item.gun_star_f_silenced.name=消音手枪
 item.gun_pa_melee.name=动力装甲-近战控制器
 item.gun_pa_ranged.name=动力装甲-远程控制器
 item.gun_star_f_akimbo.name=打靶手枪
+=======
+item.gun_pa_melee.name=动力装甲-近战控制器
+item.gun_pa_ranged.name=动力装甲-远程控制器
+item.gun_star_f.name=打靶手枪
+item.gun_star_f_akimbo.name=打靶手枪
+item.gun_star_f_silenced.name=消音手枪
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 item.item_expensive.degenerate_matter.name=简并态物质
 item.item_expensive.gold_dust.name=超精细金粉
 item.ncrpa_boots.name=NCR游侠动力装甲 靴子
@@ -7336,6 +7400,7 @@ item.ncrpa_plate.name=NCR游侠动力装甲 胸甲
 tile.machine_industrial_turbine.name=工业汽轮机
 tile.machine_industrial_turbine.desc=效率: 100%%
 tile.red_connector_super.name=大型电力连接器
+<<<<<<< HEAD
 item.billet_uzh.name=铀氢锆燃料坯料
 item.rbmk_fuel_uzh.name=RBMK反应堆铀氢锆燃料棒
 item.rbmk_pellet_uzh.name=铀氢锆燃料芯块
@@ -7350,3 +7415,60 @@ tile.rbmk.dodd.t1=四氟甲烷储量
 tile.rbmk.dodd.t1_max=四氟甲烷容量
 tile.rbmk.dodd.t1_type=四氟甲烷种类
 tile.rbmk.dodd.t1_p=四氟甲烷压力
+=======
+container.rbmkKeyPad=无线红石信号按钮输出端
+item.billet_uzh.name=铀氢锆燃料坯料
+item.rbmk_fuel_uzh.name=RBMK反应堆铀氢锆燃料棒
+item.rbmk_pellet_uzh.name=铀氢锆燃料芯块
+tile.astroturf.name=人造橡胶草坪
+tile.rbmk_control_reasim.name=RBMK反应堆控制棒 (ReaSim)
+tile.rbmk_control_reasim_auto.name=RBMK反应堆自动控制棒 (ReaSim)
+tile.rbmk_display.name=RBMK显示面板
+tile.rbmk_gauge.name=无线红石信号流量控制器面板
+tile.rbmk_key_pad.name=无线红石信号按钮面板
+autoswitch.weldPlates=焊接板
+container.machinePlasmaForge=等离子锻炉
+container.rbmkGauge=无线红石信号流量控制器面板
+container.rbmkGraph=无线红石信号图表面板
+container.rbmkNumitron=无线红石信号数字显示器
+damage.exact.laser=激光
+damage.exact.onfire=灼烧伤害
+entity.hbm.entity_ntm_bfa.name=放射性天使
+entity.hbm.entity_micro_ufo.name=“宏”UFO
+entity.hbm.entity_meme_ufo.name=迷你UFO
+gui.recipe.plasmaIn=等离子体能量输入
+item.core_angel.name=天使核心
+item.divine_shard.name=神圣碎片
+item.spawn_angel.name=生成放射性天使
+tile.fusion_plasma_forge.name=等离子锻炉
+tile.rbmk_display_blank.name=无线红石信号空白面板
+tile.rbmk_graph.name=无线红石信号图表面板
+tile.rbmk_numitron.name=无线红石信号数字显示器
+item.grenade_extra.frag_sleeve.name=手榴弹升级 - 预制破片套筒
+item.grenade_extra.glue.name=手榴弹升级 - 粘性涂层
+item.grenade_extra.proxy_fuze.name=手榴弹升级 - 近炸引信
+item.grenade_extra.triplex.name=手榴弹升级 - 三联体
+item.grenade_filling.cluster.name=集束手榴弹装药
+item.grenade_filling.cluster_heavy.name=重型集束手榴弹装药
+item.grenade_filling.demo.name=破坏者手榴弹装药
+item.grenade_filling.emp.name=电磁脉冲手榴弹装药
+item.grenade_filling.he.name=高爆手榴弹装药
+item.grenade_filling.inc.name=燃烧手榴弹装药
+item.grenade_filling.laser.name=激光手榴弹装药
+item.grenade_filling.nuclear.name=核子手榴弹装药
+item.grenade_filling.nuclear_demo.name=破坏性核子手榴弹装药
+item.grenade_filling.plasma.name=等离子手榴弹装药
+item.grenade_filling.powder.name=火药手榴弹装药
+item.grenade_filling.schrab.name=Sa326手榴弹装药
+item.grenade_filling.wp.name=白磷手榴弹装药
+item.grenade_fuze.airburst.name=手榴弹空爆引信
+item.grenade_fuze.impact.name=手榴弹碰炸引信
+item.grenade_fuze.s3.name=3秒延时引信
+item.grenade_fuze.s7.name=7秒延时引信
+item.grenade_fuze.s15.name=15秒延时引信
+item.grenade_shell.frag.name=紧凑型手榴弹外壳
+item.grenade_shell.nuke.name=核子手榴弹外壳
+item.grenade_shell.stick.name=木柄手榴弹外壳
+item.grenade_shell.tech.name=高科技手榴弹外壳
+item.grenade_universal.name=手榴弹
+>>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
