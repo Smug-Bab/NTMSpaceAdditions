@@ -16,6 +16,14 @@ public class EntityFBIDrone extends EntityUFOBase {
 
 	public EntityFBIDrone(World world) {
 		super(world);
+		
+	}
+	
+	protected String getLivingSound() {
+		return "hbm:item.techBleep";
+	}
+	protected String getHurtSound() {
+		return "hbm:entity.dronesay";
 	}
 
 	@Override

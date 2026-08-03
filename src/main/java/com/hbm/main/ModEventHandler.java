@@ -39,6 +39,7 @@ import com.hbm.dim.trait.CBT_Lights;
 import com.hbm.dim.trait.CBT_Weather;
 import com.hbm.dim.trait.CelestialBodyTrait;
 import com.hbm.entity.missile.EntityRideableRocket;
+import net.minecraft.entity.monster.EntityBlaze;
 import com.hbm.entity.mob.EntityCreeperTainted;
 import com.hbm.entity.mob.EntityCyberCrab;
 import com.hbm.entity.projectile.EntityBulletBaseMK4;
@@ -977,6 +978,12 @@ public class ModEventHandler {
 
 		EntityLivingBase e = event.entityLiving;
 
+		if (event.entity instanceof EntityBlaze) {
+			if ((event.source == ModDamageSource.oxyprime)) {
+				event.setCanceled(true);
+			}
+		}
+		
 		if(e instanceof EntityPlayer) {
 
 			EntityPlayer player = (EntityPlayer) e;

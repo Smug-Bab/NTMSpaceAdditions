@@ -367,7 +367,13 @@
 	"entity.rocketStage": {"category": "player", "sounds": [{"name": "entity/rocketStage", "stream": false}]},
 	"entity.bfatalk": {"category": "player", "sounds": [{"name": "entity/bfa_talk", "stream": false}]},
 	"entity.bfashoot": {"category": "player", "sounds": [{"name": "entity/bfa_shoot", "stream": false}]},
-
+	"entity.reapersay": {"category": "hostile", "sounds": ["entity/reapersay"]},
+	"entity.reaperhurt": {"category": "hostile", "sounds": ["entity/reaperhurt"]},
+	"entity.reaperdeath": {"category": "hostile", "sounds": ["entity/reaperdeath"]},
+	"entity.fbisay": {"category": "hostile", "sounds": ["entity/fbisay"]},
+	"entity.glyphidsay": {"category": "hostile", "sounds": ["entity/glyphidsay","entity/glyphidsay0"]},
+	"entity.glyphidhurt": {"category": "hostile", "sounds": ["entity/glyphidhurt"]},
+	
 	"step.metal": {"category": "player", "sounds": [{"name": "footsteps/metal", "stream": false}]},
 	"step.iron_jump": {"category": "player", "sounds": [{"name": "footsteps/iron_jump", "stream": false}]},
 	"step.iron_land": {"category": "player", "sounds": [{"name": "footsteps/iron_land", "stream": false}]},

@@ -1,7 +1,7 @@
 package com.hbm.dim.moho.biome;
 
 import com.hbm.blocks.ModBlocks;
-
+import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.world.biome.BiomeGenBase;
 
 public class BiomeGenMohoCrag extends BiomeGenBaseMoho {

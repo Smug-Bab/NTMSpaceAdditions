@@ -4,8 +4,6 @@
 /NTMSpaceAdditions/src/main/java/com/hbm/main/ClientProxy.java
 /NTMSpaceAdditions/src/main/java/com/hbm/render/entity/mob/RenderReaper.java
 /NTMSpaceAdditions/src/main/java/com/hbm/render/model/ModelReaper.java
-/NTMSpaceAdditions/src/main/resources/assets/hbm/lang/
-/NTMSpaceAdditions/src/main/resources/assets/hbm/sounds.json
 /NTMSpaceAdditions/src/main/java/com/hbm/dim/dres/biome/BiomeGenBaseDres.java
 /NTMSpaceAdditions/src/main/java/com/hbm/dim/duna/biome/BiomeGenBaseDuna.java
 /NTMSpaceAdditions/src/main/java/com/hbm/dim/eve/biome/BiomeGenBaseEve.java
@@ -13,6 +11,7 @@
 /NTMSpaceAdditions/src/main/java/com/hbm/main/ModEventHandler.java
 /NTMSpaceAdditions/src/main/java/com/hbm/entity/mob/glyphid/EntityGlyphid.java
 /NTMSpaceAdditions/src/main/java/com/hbm/entity/mob/EntityFBI.java
+/NTMSpaceAdditions/src/main/resources/assets/hbm/sounds.json
 /NTMSpaceAdditions/src/main/resources/assets/hbm/sounds/entity/glyphidhurt.ogg
 /NTMSpaceAdditions/src/main/resources/assets/hbm/sounds/entity/glyphidsay.ogg
 /NTMSpaceAdditions/src/main/resources/assets/hbm/sounds/entity/glyphidsay0.ogg
