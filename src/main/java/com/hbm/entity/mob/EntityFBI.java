@@ -65,7 +65,7 @@ public class EntityFBI extends EntityMob implements IRangedAttackMob, ISuffocati
 <<<<<<< HEAD
 =======
 	protected String getLivingSound() {
-		return "hbm:entity.reapersay";
+		return "hbm:entity.fbisay";
 	}
 
 >>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
