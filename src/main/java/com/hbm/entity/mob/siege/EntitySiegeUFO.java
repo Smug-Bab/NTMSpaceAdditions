@@ -157,23 +157,12 @@ public class EntitySiegeUFO extends EntityUFOBase implements IRadiationImmune {
 		}
 		
 		if(this.courseChangeCooldown > 0) {
-<<<<<<< HEAD
-			    double speed = this.target == null ? 0.5D : 1.0D + (this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue() * 1.0D);
-			    
-			    if(isRetreating) speed *= 2.0D; 
-			    
-			    approachPosition(speed);
-			}
-		
-		
-=======
 			double speed = this.target == null ? 0.5D : 1.0D + (this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue() * 1.0D);
 			
 			if(isRetreating) speed *= 2.0D; 
 			
 			approachPosition(speed);
 		}
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	}
 
 	

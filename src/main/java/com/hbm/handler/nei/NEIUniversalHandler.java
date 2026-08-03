@@ -14,10 +14,7 @@ import com.hbm.handler.imc.ICompatNHNEI;
 import com.hbm.items.ModItems;
 import com.hbm.lib.RefStrings;
 import com.hbm.util.InventoryUtil;
-<<<<<<< HEAD
-=======
 import com.hbm.util.Tuple.Pair;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 import codechicken.nei.NEIServerUtils;
 import codechicken.nei.PositionedStack;
@@ -27,10 +24,6 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-<<<<<<< HEAD
-@Deprecated // an experiment that i had to staple more and more features to until it ended up a bloated decaying corpse
-=======
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 public abstract class NEIUniversalHandler extends TemplateRecipeHandler implements ICompatNHNEI {
 
 	public LinkedList<RecipeTransferRect> transferRectsRec = new LinkedList<RecipeTransferRect>();
@@ -41,19 +34,6 @@ public abstract class NEIUniversalHandler extends TemplateRecipeHandler implemen
 	/// SETUP ///
 	public final String display;
 	public final ItemStack[] machine;
-<<<<<<< HEAD
-	public final HashMap<Object, Object> recipes;
-	public HashMap<Object, Object> machineOverrides;
-	/// SETUP ///
-	public NEIUniversalHandler(String display, ItemStack machine[], HashMap recipes) {
-		this.display = display;
-		this.machine = machine;
-		this.recipes = recipes;
-		this.machineOverrides = null;
-	}
-	
-	public NEIUniversalHandler(String display, HashMap recipes, HashMap machines) {
-=======
 	public final List<Pair<Object, Object>> recipes = new ArrayList();
 	public HashMap<Object, Object> machineOverrides;
 	/// SETUP ///
@@ -75,23 +55,16 @@ public abstract class NEIUniversalHandler extends TemplateRecipeHandler implemen
 		this.machineOverrides = machines;
 	}
 	public NEIUniversalHandler(String display, List recipes, HashMap machines) {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		this(display, (ItemStack[]) null, recipes);
 		this.machineOverrides = machines;
 	}
 
-<<<<<<< HEAD
-	public NEIUniversalHandler(String display, ItemStack machine, HashMap recipes) {	this(display, new ItemStack[]{machine}, recipes); }
-	public NEIUniversalHandler(String display, Item machine, HashMap recipes) {			this(display, new ItemStack(machine), recipes); }
-	public NEIUniversalHandler(String display, Block machine, HashMap recipes) {		this(display, new ItemStack(machine), recipes); }
-=======
 	@Deprecated public NEIUniversalHandler(String display, ItemStack machine, HashMap recipes) {	this(display, new ItemStack[]{machine}, recipes); }
 	@Deprecated public NEIUniversalHandler(String display, Item machine, HashMap recipes) {			this(display, new ItemStack(machine), recipes); }
 	@Deprecated public NEIUniversalHandler(String display, Block machine, HashMap recipes) {		this(display, new ItemStack(machine), recipes); }
 	public NEIUniversalHandler(String display, ItemStack machine, List recipes) {		this(display, new ItemStack[]{machine}, recipes); }
 	public NEIUniversalHandler(String display, Item machine, List recipes) {			this(display, new ItemStack(machine), recipes); }
 	public NEIUniversalHandler(String display, Block machine, List recipes) {			this(display, new ItemStack(machine), recipes); }
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 	public class RecipeSet extends TemplateRecipeHandler.CachedRecipe {
 		
@@ -319,11 +292,7 @@ public abstract class NEIUniversalHandler extends TemplateRecipeHandler implemen
 		
 		if(outputId.equals(getKey())) {
 			
-<<<<<<< HEAD
-			outer: for(Entry<Object, Object> recipe : recipes.entrySet()) {
-=======
 			outer: for(Pair<Object, Object> recipe : recipes) {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 				ItemStack[][] ins = InventoryUtil.extractObject(recipe.getKey());
 				ItemStack[][] outs = InventoryUtil.extractObject(recipe.getValue());
 				
@@ -341,11 +310,7 @@ public abstract class NEIUniversalHandler extends TemplateRecipeHandler implemen
 	@Override
 	public void loadCraftingRecipes(ItemStack result) {
 		
-<<<<<<< HEAD
-		outer: for(Entry<Object, Object> recipe : recipes.entrySet()) {
-=======
 		outer: for(Pair<Object, Object> recipe : recipes) {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 			ItemStack[][] ins = InventoryUtil.extractObject(recipe.getKey());
 			ItemStack[][] outs = InventoryUtil.extractObject(recipe.getValue());
 			
@@ -376,11 +341,7 @@ public abstract class NEIUniversalHandler extends TemplateRecipeHandler implemen
 	@Override
 	public void loadUsageRecipes(ItemStack ingredient) {
 		
-<<<<<<< HEAD
-		outer: for(Entry<Object, Object> recipe : recipes.entrySet()) {
-=======
 		outer: for(Pair<Object, Object> recipe : recipes) {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 			ItemStack[][] ins = InventoryUtil.extractObject(recipe.getKey());
 			ItemStack[][] outs = InventoryUtil.extractObject(recipe.getValue());
 			

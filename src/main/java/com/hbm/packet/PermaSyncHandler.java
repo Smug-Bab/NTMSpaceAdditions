@@ -14,6 +14,7 @@ import com.hbm.dim.orbit.OrbitalStation;
 import com.hbm.dim.trait.CBT_War;
 import com.hbm.dim.trait.CBT_War.Projectile;
 import com.hbm.dim.trait.CelestialBodyTrait;
+import com.hbm.handler.CelestialNukeShockHandler;
 import com.hbm.handler.ImpactWorldHandler;
 import com.hbm.handler.pollution.PollutionHandler;
 import com.hbm.handler.pollution.PollutionHandler.PollutionData;
@@ -49,6 +50,7 @@ public class PermaSyncHandler {
 		buf.writeFloat(data.dust);
 		buf.writeBoolean(data.impact);
 		buf.writeLong(data.time);
+		CelestialNukeShockHandler.writeSync(buf, world);
 		/// TOM IMPACT DATA ///
 
 		/// SHITTY MEMES ///
@@ -112,15 +114,6 @@ public class PermaSyncHandler {
 		/// CBT ///
 
 		/// SATELLITES ///
-<<<<<<< HEAD
-		// Only syncs data required for rendering satellites on the client
-		HashMap<Integer, Satellite> sats = SatelliteSavedData.getData(world, (int)player.posX, (int)player.posZ).sats;
-		buf.writeInt(sats.size());
-		for(Map.Entry<Integer, Satellite> entry : sats.entrySet()) {
-			buf.writeInt(entry.getKey());
-			buf.writeInt(entry.getValue().getID());
-			entry.getValue().serialize(buf);
-=======
 		HashMap<Integer, HashMap<Integer, Satellite>> satsByDimension = new HashMap<Integer, HashMap<Integer, Satellite>>();
 		int currentSatelliteDimensionId = world.provider.dimensionId;
 		if(CelestialBody.inOrbit(world)) {
@@ -145,7 +138,6 @@ public class PermaSyncHandler {
 				buf.writeInt(satEntry.getValue().getID());
 				satEntry.getValue().serialize(buf);
 			}
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		}
 		/// SATELLITES ///
 
@@ -186,6 +178,7 @@ public class PermaSyncHandler {
 		ImpactWorldHandler.dust = buf.readFloat();
 		ImpactWorldHandler.impact = buf.readBoolean();
 		ImpactWorldHandler.time = buf.readLong();
+		CelestialNukeShockHandler.readSync(buf);
 		/// TOM IMPACT DATA ///
 
 		/// SHITTY MEMES ///
@@ -271,9 +264,6 @@ public class PermaSyncHandler {
 			satsByDimension.put(dimensionId, sats);
 		}
 
-<<<<<<< HEAD
-		SatelliteSavedData.setClientSats(sats);
-=======
 		SatelliteSavedData.setClientSatsByDimension(satsByDimension);
 		int currentSatelliteDimensionId = world.provider.dimensionId;
 		if(CelestialBody.inOrbit(world) && OrbitalStation.clientStation != null && OrbitalStation.clientStation.orbiting != null) {
@@ -281,7 +271,6 @@ public class PermaSyncHandler {
 		}
 		HashMap<Integer, Satellite> currentSats = satsByDimension.get(currentSatelliteDimensionId);
 		SatelliteSavedData.setClientSats(currentSats != null ? currentSats : new HashMap<Integer, Satellite>());
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		/// SATELLITES ///
 
 		/// TIME OF DAY ///

@@ -6,7 +6,6 @@ import com.hbm.blocks.ModBlocks;
 import com.hbm.config.SpaceConfig;
 import com.hbm.dim.BiomeDecoratorCelestial;
 import com.hbm.dim.BiomeGenBaseCelestial;
-import net.minecraft.entity.monster.EntityBlaze;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

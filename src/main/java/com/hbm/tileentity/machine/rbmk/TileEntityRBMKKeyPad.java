@@ -1,9 +1,6 @@
 package com.hbm.tileentity.machine.rbmk;
 
-<<<<<<< HEAD
-=======
 import com.hbm.handler.CompatHandler;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import com.hbm.interfaces.IControlReceiver;
 import com.hbm.inventory.gui.GUIScreenRBMKKeyPad;
 import com.hbm.tileentity.IGUIProvider;
@@ -11,28 +8,20 @@ import com.hbm.tileentity.TileEntityLoadedBase;
 import com.hbm.tileentity.network.RTTYSystem;
 import com.hbm.util.BufferUtil;
 
-<<<<<<< HEAD
-import io.netty.buffer.ByteBuf;
-=======
 import cpw.mods.fml.common.Optional;
 import io.netty.buffer.ByteBuf;
 import li.cil.oc.api.machine.Arguments;
 import li.cil.oc.api.machine.Callback;
 import li.cil.oc.api.machine.Context;
 import li.cil.oc.api.network.SimpleComponent;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-<<<<<<< HEAD
-public class TileEntityRBMKKeyPad extends TileEntityLoadedBase implements IGUIProvider, IControlReceiver {
-=======
 @Optional.InterfaceList({@Optional.Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = "OpenComputers")})
 public class TileEntityRBMKKeyPad extends TileEntityLoadedBase implements IGUIProvider, IControlReceiver, SimpleComponent, CompatHandler.OCComponent {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	
 	/*    __________
 	 *   /         /|
@@ -214,8 +203,6 @@ public class TileEntityRBMKKeyPad extends TileEntityLoadedBase implements IGUIPr
 			key.command = data.getString("cmd" + i);
 		}
 	}
-<<<<<<< HEAD
-=======
 
 	// OpenComputers methods
 	@Override
@@ -318,5 +305,4 @@ public class TileEntityRBMKKeyPad extends TileEntityLoadedBase implements IGUIPr
 		if(idx < 0 || idx >= 4) return new Object[] {false, "Invalid index (1-4)"};
 		return new Object[] {keys[idx].isPressed};
 	}
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 }

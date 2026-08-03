@@ -1,8 +1,6 @@
 package com.hbm.entity.mob;
 
 import api.hbm.entity.ISuffocationImmune;
-import com.hbm.lib.ModDamageSource;
-import net.minecraft.util.DamageSource;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -14,16 +12,6 @@ public class EntityParasiteMaggot extends EntityMob implements ISuffocationImmun
 	public EntityParasiteMaggot(World world) {
 		super(world);
 		this.setSize(0.3F, 0.7F);
-	}
-
-	@Override
-	public boolean attackEntityFrom(DamageSource source, float amount) {
-
-		if ((source == ModDamageSource.oxyprime || source == ModDamageSource.acid)) {
-			return false;
-		}
-
-		return super.attackEntityFrom(source, amount);
 	}
 
 	@Override

@@ -216,6 +216,12 @@ public class TileEntityPWRController extends TileEntityMachineBase implements IG
 					if(this.rodTarget > this.rodLevel) this.rodLevel++;
 					if(this.rodTarget < this.rodLevel) this.rodLevel--;
 
+					double multiplier = 1D;
+
+					if(tanks[0].getTankType().hasTrait(FT_PWRModerator.class)) {
+						multiplier = tanks[0].getTankType().getTrait(FT_PWRModerator.class).getMultiplier();
+					}
+
 					int newFlux = this.sourceCount * 20;
 
 					if(typeLoaded != -1 && amountLoaded > 0) {
@@ -226,6 +232,10 @@ public class TileEntityPWRController extends TileEntityMachineBase implements IG
 						double outputPerRod = fuel.function.effonix(fluxPerRod);
 						double totalOutput = outputPerRod * amountLoaded * usedRods;
 						double totalHeatOutput = totalOutput * fuel.heatEmission;
+
+						if(tanks[0].getFill() > 0) {
+							totalHeatOutput *= multiplier;
+						}
 
 						this.coreHeat += totalHeatOutput;
 						newFlux += totalOutput;
@@ -266,8 +276,8 @@ public class TileEntityPWRController extends TileEntityMachineBase implements IG
 
 					this.flux = newFlux;
 
-					if(tanks[0].getTankType().hasTrait(FT_PWRModerator.class) && tanks[0].getFill() > 0) {
-						this.flux *= tanks[0].getTankType().getTrait(FT_PWRModerator.class).getMultiplier();
+					if(tanks[0].getFill() > 0) {
+						this.flux *= multiplier;
 					}
 
 					if(this.coreHeat > this.coreHeatCapacity) {
@@ -640,19 +650,6 @@ public class TileEntityPWRController extends TileEntityMachineBase implements IG
 	@Override public FluidTank[] getAllTanks() { return tanks; }
 	@Override public FluidTank[] getSendingTanks() { return new FluidTank[] { tanks[1] }; }
 	@Override public FluidTank[] getReceivingTanks() { return new FluidTank[] { tanks[0] }; }
-<<<<<<< HEAD
-
-	@Override
-	public String[] getFunctionInfo() {
-		return new String[] {
-				PREFIX_VALUE + "coreheat",
-				PREFIX_VALUE + "hullheat",
-				PREFIX_VALUE + "flux",
-				PREFIX_VALUE + "depletion",
-				PREFIX_FUNCTION + "setrods" + NAME_SEPARATOR + "percent",
-				PREFIX_FUNCTION + "jettison",
-		};
-=======
 	
 	public static final String[] ROR = new String[] { // not to be confused with RUR
 		PREFIX_VALUE + "rods",
@@ -667,15 +664,11 @@ public class TileEntityPWRController extends TileEntityMachineBase implements IG
 	@Override
 	public String[] getFunctionInfo() {
 		return ROR;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	}
 
 	@Override
 	public String provideRORValue(String name) {
-<<<<<<< HEAD
-=======
 		if((PREFIX_VALUE + "rods").equals(name))		return "" + (int) (100 - this.rodLevel); // why the fuck did i invert this again?
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		if((PREFIX_VALUE + "coreheat").equals(name))	return "" + this.coreHeat;
 		if((PREFIX_VALUE + "hullheat").equals(name))	return "" + this.hullHeat;
 		if((PREFIX_VALUE + "flux").equals(name))		return "" + (int) this.flux;

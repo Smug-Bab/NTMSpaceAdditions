@@ -13,10 +13,7 @@ import com.hbm.util.fauxpointtwelve.DirPos;
 
 import api.hbm.energymk2.IEnergyProviderMK2;
 import api.hbm.fluidmk2.IFluidStandardTransceiverMK2;
-<<<<<<< HEAD
-=======
 import api.hbm.redstoneoverradio.IRORValueProvider;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import api.hbm.tile.IInfoProviderEC;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -24,11 +21,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import net.minecraft.nbt.NBTTagCompound;
 
-<<<<<<< HEAD
-public abstract class TileEntityTurbineBase extends TileEntityLoadedBase implements IEnergyProviderMK2, IFluidStandardTransceiverMK2, IInfoProviderEC, IBufPacketReceiver, IFluidCopiable {
-=======
 public abstract class TileEntityTurbineBase extends TileEntityLoadedBase implements IEnergyProviderMK2, IFluidStandardTransceiverMK2, IInfoProviderEC, IBufPacketReceiver, IFluidCopiable, IRORValueProvider {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 	protected ByteBuf buf;
 	public long powerBuffer;

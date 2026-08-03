@@ -1,9 +1,6 @@
 package com.hbm.tileentity.machine.rbmk;
 
-<<<<<<< HEAD
-=======
 import com.hbm.handler.CompatHandler;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import com.hbm.interfaces.IControlReceiver;
 import com.hbm.inventory.gui.GUIScreenRBMKGauge;
 import com.hbm.tileentity.IGUIProvider;
@@ -12,28 +9,20 @@ import com.hbm.tileentity.network.RTTYSystem;
 import com.hbm.tileentity.network.RTTYSystem.RTTYChannel;
 import com.hbm.util.BufferUtil;
 
-<<<<<<< HEAD
-import io.netty.buffer.ByteBuf;
-=======
 import cpw.mods.fml.common.Optional;
 import io.netty.buffer.ByteBuf;
 import li.cil.oc.api.machine.Arguments;
 import li.cil.oc.api.machine.Callback;
 import li.cil.oc.api.machine.Context;
 import li.cil.oc.api.network.SimpleComponent;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-<<<<<<< HEAD
-public class TileEntityRBMKGauge extends TileEntityLoadedBase implements IGUIProvider, IControlReceiver {
-=======
 @Optional.InterfaceList({@Optional.Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = "OpenComputers")})
 public class TileEntityRBMKGauge extends TileEntityLoadedBase implements IGUIProvider, IControlReceiver, SimpleComponent, CompatHandler.OCComponent {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	
 	/*    __________
 	 *   /         /|
@@ -102,19 +91,11 @@ public class TileEntityRBMKGauge extends TileEntityLoadedBase implements IGUIPro
 		/** What channel to read values from */
 		public String rtty = "";
 		/** The minium value handled by the gauge */
-<<<<<<< HEAD
-		public int min = 0;
-		/** The maximum value of the gauge, i.e. where the red area begins */
-		public int max = 100;
-		/** The current read value of the gauge, i.e. the needle position */
-		public int value;
-=======
 		public long min = 0;
 		/** The maximum value of the gauge, i.e. where the red area begins */
 		public long max = 100;
 		/** The current read value of the gauge, i.e. the needle position */
 		public long value;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		/** For smoothig */
 		public double renderValue;
 		public double lastRenderValue;
@@ -160,15 +141,9 @@ public class TileEntityRBMKGauge extends TileEntityLoadedBase implements IGUIPro
 			buf.writeInt(color);
 			BufferUtil.writeString(buf, label);
 			BufferUtil.writeString(buf, rtty);
-<<<<<<< HEAD
-			buf.writeInt(min);
-			buf.writeInt(max);
-			buf.writeInt(value);
-=======
 			buf.writeLong(min);
 			buf.writeLong(max);
 			buf.writeLong(value);
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		}
 
 		public void deserialize(ByteBuf buf) {
@@ -177,15 +152,9 @@ public class TileEntityRBMKGauge extends TileEntityLoadedBase implements IGUIPro
 			color = buf.readInt();
 			label = BufferUtil.readString(buf);
 			rtty = BufferUtil.readString(buf);
-<<<<<<< HEAD
-			min = buf.readInt();
-			max = buf.readInt();
-			value = buf.readInt();
-=======
 			min = buf.readLong();
 			max = buf.readLong();
 			value = buf.readLong();
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		}
 
 		public void readFromNBT(NBTTagCompound nbt, int index) {
@@ -194,15 +163,9 @@ public class TileEntityRBMKGauge extends TileEntityLoadedBase implements IGUIPro
 			this.color = nbt.getInteger("color" + index);
 			this.label = nbt.getString("label" + index);
 			this.rtty = nbt.getString("rtty" + index);
-<<<<<<< HEAD
-			this.min = nbt.getInteger("min" + index);
-			this.max = nbt.getInteger("max" + index);
-			this.value = nbt.getInteger("value" + index);
-=======
 			this.min = nbt.getLong("min" + index);
 			this.max = nbt.getLong("max" + index);
 			this.value = nbt.getLong("value" + index);
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		}
 
 		public void writeToNBT(NBTTagCompound nbt, int index) {
@@ -211,15 +174,9 @@ public class TileEntityRBMKGauge extends TileEntityLoadedBase implements IGUIPro
 			nbt.setInteger("color" + index, color);
 			nbt.setString("label" + index, label);
 			nbt.setString("rtty" + index, rtty);
-<<<<<<< HEAD
-			nbt.setInteger("min" + index, min);
-			nbt.setInteger("max" + index, max);
-			nbt.setInteger("value" + index, value);
-=======
 			nbt.setLong("min" + index, min);
 			nbt.setLong("max" + index, max);
 			nbt.setLong("value" + index, value);
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		}
 	}
 
@@ -250,8 +207,6 @@ public class TileEntityRBMKGauge extends TileEntityLoadedBase implements IGUIPro
 			gauge.max = data.getInteger("max" + i);
 		}
 	}
-<<<<<<< HEAD
-=======
 
 	// OpenComputers methods
 	@Override
@@ -356,5 +311,4 @@ public class TileEntityRBMKGauge extends TileEntityLoadedBase implements IGUIPro
 		markDirty();
 		return new Object[] {true};
 	}
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 }

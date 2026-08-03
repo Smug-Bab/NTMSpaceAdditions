@@ -15,11 +15,6 @@ public class PacketDispatcher {
 	public static void registerPackets() {
 		int i = 0;
 
-<<<<<<< HEAD
-		//Signals server to consume items and create template
-		wrapper.registerMessage(ItemFolderPacket.Handler.class, ItemFolderPacket.class, i++, Side.SERVER);
-=======
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		//Siren packet for looped sounds
 		wrapper.registerMessage(TESirenPacket.Handler.class, TESirenPacket.class, i++, Side.CLIENT);
 		//Signals server to change ItemStacks
@@ -85,6 +80,9 @@ public class PacketDispatcher {
 
 		//Syncs muzzle flashes of SEDNA guns for clients from other entities/players
 		wrapper.registerMessage(MuzzleFlashPacket.Handler.class, MuzzleFlashPacket.class, i++, Side.CLIENT);
+		//Sends custom container-bound payload between client and server, dual-use capable
+		wrapper.registerMessage(ContainerNBTCommsPacket.Handler.class, ContainerNBTCommsPacket.class, i++, Side.CLIENT);
+		wrapper.registerMessage(ContainerNBTCommsPacket.Handler.class, ContainerNBTCommsPacket.class, i++, Side.SERVER);
 	}
 
 }

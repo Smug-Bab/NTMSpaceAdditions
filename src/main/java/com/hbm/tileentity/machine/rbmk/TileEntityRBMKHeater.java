@@ -1,10 +1,7 @@
 package com.hbm.tileentity.machine.rbmk;
 
 import api.hbm.fluidmk2.IFluidStandardTransceiverMK2;
-<<<<<<< HEAD
-=======
 import api.hbm.redstoneoverradio.IRORValueProvider;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 import com.hbm.blocks.ModBlocks;
 import com.hbm.entity.projectile.EntityRBMKDebris.DebrisType;
@@ -33,11 +30,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
 @Optional.InterfaceList({@Optional.Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = "opencomputers")})
-<<<<<<< HEAD
-public class TileEntityRBMKHeater extends TileEntityRBMKSlottedBase implements IFluidStandardTransceiverMK2, SimpleComponent, CompatHandler.OCComponent {
-=======
 public class TileEntityRBMKHeater extends TileEntityRBMKSlottedBase implements IFluidStandardTransceiverMK2, IRORValueProvider, SimpleComponent, CompatHandler.OCComponent {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 	public FluidTank feed;
 	public FluidTank steam;

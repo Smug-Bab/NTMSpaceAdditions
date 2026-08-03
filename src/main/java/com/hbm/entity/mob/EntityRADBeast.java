@@ -31,16 +31,6 @@ public class EntityRADBeast extends EntityMob implements IRadiationImmune, ISuff
 		this.experienceValue = 30;
 	}
 
-		@Override
-	public boolean attackEntityFrom(DamageSource source, float amount) {
-
-		if ((source == ModDamageSource.oxyprime || source == ModDamageSource.acid)) {
-			return false;
-		}
-
-		return super.attackEntityFrom(source, amount);
-	}
-
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(120.0D);

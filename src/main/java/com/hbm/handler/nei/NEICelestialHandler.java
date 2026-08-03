@@ -4,19 +4,12 @@ import static codechicken.lib.gui.GuiDraw.changeTexture;
 import static codechicken.lib.gui.GuiDraw.drawStringC;
 
 import java.util.HashMap;
-<<<<<<< HEAD
-import java.util.Map.Entry;
-=======
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 import com.hbm.dim.CelestialBody;
 import com.hbm.items.ModItems;
 import com.hbm.util.Clock;
 import com.hbm.util.InventoryUtil;
-<<<<<<< HEAD
-=======
 import com.hbm.util.Tuple.Pair;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import com.hbm.util.i18n.I18nUtil;
 
 import codechicken.nei.NEIServerUtils;
@@ -70,11 +63,7 @@ public abstract class NEICelestialHandler extends NEIUniversalHandler {
 
 		if(outputId.equals(getKey())) {
 
-<<<<<<< HEAD
-			outer: for(Entry<Object, Object> recipe : recipes.entrySet()) {
-=======
 			outer: for(Pair<Object, Object> recipe : recipes) {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 				ItemStack[][] ins = new ItemStack[0][0];
 				ItemStack[][] outs = InventoryUtil.extractObject(recipe.getValue());
 
@@ -92,11 +81,7 @@ public abstract class NEICelestialHandler extends NEIUniversalHandler {
 	@Override
 	public void loadCraftingRecipes(ItemStack result) {
 
-<<<<<<< HEAD
-		outer: for(Entry<Object, Object> recipe : recipes.entrySet()) {
-=======
 		outer: for(Pair<Object, Object> recipe : recipes) {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 			ItemStack[][] ins = new ItemStack[0][0];
 			ItemStack[][] outs = InventoryUtil.extractObject(recipe.getValue());
 

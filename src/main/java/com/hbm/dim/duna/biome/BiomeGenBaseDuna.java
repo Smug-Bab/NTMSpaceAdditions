@@ -5,7 +5,6 @@ import com.hbm.blocks.ModBlocks;
 import com.hbm.config.SpaceConfig;
 import com.hbm.dim.BiomeDecoratorCelestial;
 import com.hbm.dim.BiomeGenBaseCelestial;
-import com.hbm.entity.mob.glyphid.EntityGlyphidScout;
 
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeDictionary;
@@ -20,8 +19,6 @@ public abstract class BiomeGenBaseDuna extends BiomeGenBaseCelestial {
 
 	public BiomeGenBaseDuna(int id) {
 		super(id);
-
-		this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityGlyphidScout.class, 1, 1, 3));
 
 		this.setDisableRain();
 		this.setTemperatureRainfall(-1.0F, 0.0F);

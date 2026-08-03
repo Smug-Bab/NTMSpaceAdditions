@@ -34,11 +34,8 @@ public class NTMSounds {
 	public static final String GUN_LATCH_OPEN = "hbm:weapon.reload.openLatch";
 	public static final String GUN_VALVE = "hbm:weapon.reload.pressureValve";
 	public static final String GUN_FATMAN_RELOAD = "hbm:weapon.reload.fatmanFull";
-<<<<<<< HEAD
-=======
 	public static final String GRENADE_TECH = "hbm:weapon.reload.grenadeTech";
 	public static final String GRENADE_NUKA = "hbm:weapon.reload.grenadeNuka";
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	
 	/// FOLEY ///
 	public static final String GUN_WHACK = "hbm:weapon.foley.gunWhack";
@@ -81,6 +78,7 @@ public class NTMSounds {
 	public static final String GUN_TAU_LOOP = "hbm:weapon.fire.tauLoop";
 	public static final String GUN_TESLA_FIRE = "hbm:weapon.fire.tesla";
 	public static final String GUN_TESLA_BLAST = "hbm:entity.ufoBlast"; // electric crackle sound explosion
+	public static final String GUN_MK108_FIRE = "hbm:weapon.fire.mk108";
 	public static final String GUN_ROCKET_FIRE = "hbm:weapon.rpgShoot";
 	public static final String GUN_EXTINGUISHER_FIRE = "hbm:weapon.extinguisher";
 	public static final String GUN_PLEASE_REMOVE_MY_EARDRUMS_THANKS = "hbm:weapon.fire.loudestNoiseOnEarth"; // folly fires
@@ -103,12 +101,9 @@ public class NTMSounds {
 	public static final String BLOCK_PLUSHY = "hbm:block.squeakyToy"; // squee
 	public static final String BLOCK_HUNDUNS_MAGNIFICENT_HOWL = "hbm:block.hunduns_magnificent_howl"; // tragic yuri
 	public static final String BLOCK_FALLOUT_3_POPUP = "hbm:block.bobble";
-<<<<<<< HEAD
-=======
 	public static final String LEVER_START = "hbm:block.leverStart";
 	public static final String LEVER_STOP = "hbm:block.leverStop";
 	public static final String SPARK = "hbm:block.spark";
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	
 	/// MACHINE SOUNDS, MOSTLY LOOPS ///
 	public static final String ELECTRIC_MOTOR_LOOP = "hbm:block.motor";
@@ -136,8 +131,6 @@ public class NTMSounds {
 	public static final String TECH_BOOP = "hbm:item.techBoop"; // boop
 	public static final String TECH_BLEEP = "hbm:item.techBleep"; // blee-boo-bee-boop
 	public static final String UPGRADE_PLUG = "hbm:item.upgradePlug"; // plok
-<<<<<<< HEAD
-=======
 	public static final String UNPACK = "hbm:item.unpack";
 	public static final String RIVET_GUN = "hbm:item.boltgun";
 	public static final String GEIGER_PREFIX = "hbm:item.geiger"; // needs a number appended to be a valid sound, 0-6
@@ -154,7 +147,7 @@ public class NTMSounds {
 	public static final String BANG = "hbm:weapon.bang"; // frying pan
 	public static final String SLICE = "hbm:weapon.slice";
 	public static final String KAPENG = "hbm:weapon.kapeng"; // third degree
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
+	public static final String METAL_IMPACT = "hbm:block.metalImpact"; // ow
 	
 	/// VANILLA CRAP I CANNOT BE ASSED TO REMEMBER ///
 	public static final String VANILLA_ORB = "random.orb"; // xp orb ping
@@ -162,14 +155,11 @@ public class NTMSounds {
 	public static final String VANILLA_FIREWORKS_BANG = "fireworks.blast";
 	public static final String VANILLA_HISS = "random.fizz"; // fire extinguishes
 	public static final String VANILLA_FIRE = "fire.fire"; // fire crackles
-<<<<<<< HEAD
-	public static final String VANILLA_MINECART = "minecart.base"; // minecart rolling loop
-	public static final String VANILLA_GIB = "mob.zombie.woodbreak"; // zombie breaks door down
-=======
 	public static final String VANILLA_IGNITE = "fire.ignite"; // flint and steel
 	public static final String VANILLA_MINECART = "minecart.base"; // minecart rolling loop
 	public static final String VANILLA_GIB = "mob.zombie.woodbreak"; // zombie breaks door down
 	public static final String VANILLA_TELEPORT = "mob.endermen.portal"; // enderman teleports
 	public static final String VANILLA_ANVIL = "random.anvil_land"; // falling anvil lands
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
+	public static final String VANILLA_PISTON_OUT = "tile.piston.out"; // falling anvil lands
+	public static final String VANILLA_PISTON_IN = "tile.piston.in"; // falling anvil lands
 }

@@ -430,12 +430,8 @@ public class ExplosionNukeGeneric {
 	public static void emp(World world, int x, int y, int z) {
 		if (!world.isRemote) {
 			
-<<<<<<< HEAD
-			TileEntity te = world.getTileEntity(x, y, z);
-=======
 			TileEntity te = Compat.getTileStandard(world, x, y, z);
 			if(te == null) return;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 			
 			if(te instanceof IEnergyHandlerMK2) {
 				((IEnergyHandlerMK2)te).setPower(0);

@@ -62,13 +62,6 @@ public class EntityFBI extends EntityMob implements IRangedAttackMob, ISuffocati
 		this.isImmuneToFire = true;
 	}
 
-<<<<<<< HEAD
-=======
-	protected String getLivingSound() {
-		return "hbm:entity.fbisay";
-	}
-
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.knockbackResistance).setBaseValue(0.5D);
@@ -169,9 +162,7 @@ public class EntityFBI extends EntityMob implements IRangedAttackMob, ISuffocati
 		canDestroy.add(ModBlocks.crate_iron);
 		canDestroy.add(ModBlocks.crate_steel);
 		canDestroy.add(ModBlocks.machine_diesel);
-		canDestroy.add(ModBlocks.machine_rtg_grey);
-		canDestroy.add(ModBlocks.machine_minirtg);
-		canDestroy.add(ModBlocks.machine_powerrtg);
+		canDestroy.add(ModBlocks.machine_rtg);
 		canDestroy.add(ModBlocks.machine_cyclotron);
 		canDestroy.add(Blocks.chest);
 		canDestroy.add(Blocks.trapped_chest);

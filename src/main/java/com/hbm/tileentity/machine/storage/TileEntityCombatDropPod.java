@@ -1,40 +1,17 @@
 package com.hbm.tileentity.machine.storage;
 
 import com.hbm.config.SpaceConfig;
-<<<<<<< HEAD
-import com.hbm.inventory.container.ContainerSoyuzCapsule;
-import com.hbm.inventory.gui.GUISoyuzCapsule;
-import com.hbm.tileentity.IBufPacketReceiver;
-import com.hbm.tileentity.IGUIProvider;
-import com.hbm.tileentity.TileEntityInventoryBase;
-import com.hbm.tileentity.TileEntityLoadedBase;
-import com.hbm.tileentity.TileEntityProxyBase;
-import com.hbm.tileentity.TileEntityProxyCombo;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import io.netty.buffer.ByteBuf;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityList;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.Container;
-=======
 import com.hbm.tileentity.IBufPacketReceiver;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
-<<<<<<< HEAD
-import net.minecraft.world.World;
-=======
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 public class TileEntityCombatDropPod extends TileEntity implements IBufPacketReceiver{
 
@@ -64,10 +41,6 @@ public class TileEntityCombatDropPod extends TileEntity implements IBufPacketRec
 	
 	public void setColor(int color) {
 		this.color = color;
-<<<<<<< HEAD
-
-=======
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	}
 
 	@Override
@@ -75,32 +48,16 @@ public class TileEntityCombatDropPod extends TileEntity implements IBufPacketRec
 		prevHatchopen = hatchopen;
 		prevHatchopen2 = hatchopen2;
 		
-<<<<<<< HEAD
-		if (delay > 0) {
-			delay--;
-			return;
-		}
-=======
 		if(delay > 0) {
 			delay--;
 			return;
 		}
 
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		if(delay == 0) {
 			hatchopen += (90 - hatchopen) * 0.2;
 			hatchopen2 += (-90 - hatchopen2) * 0.2;
 		}
 		
-<<<<<<< HEAD
-		if (entityType != null && amount > 0 && !worldObj.isRemote) {
-			
-			for (int i = 0; i < amount; i++) {
-
-				Entity entity = EntityList.createEntityFromNBT(entityType, worldObj);
-
-				if (entity != null) {
-=======
 		if(entityType != null && amount > 0 && !worldObj.isRemote) {
 			
 			for(int i = 0; i < amount; i++) {
@@ -108,29 +65,18 @@ public class TileEntityCombatDropPod extends TileEntity implements IBufPacketRec
 				Entity entity = EntityList.createEntityFromNBT(entityType, worldObj);
 
 				if(entity != null) {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 					entity.setPosition(xCoord + 0.5, yCoord + 1, zCoord + 0.5);
 
 					worldObj.spawnEntityInWorld(entity);
 				}
 			}
 
-<<<<<<< HEAD
-			amount = 0;	           
-			this.worldObj.playSoundEffect(this.xCoord, this.yCoord, this.zCoord, "hbm:block.hatchOpen", 10.0F, 0.9F);
-			return;
-
-		}
-		
-		if(SpaceConfig.combatPodDespawn == true) {
-=======
 			amount = 0;
 			this.worldObj.playSoundEffect(this.xCoord, this.yCoord, this.zCoord, "hbm:block.hatchOpen", 10.0F, 0.9F);
 			return;
 		}
 		
 		if(SpaceConfig.combatPodDespawn) {
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 			if(this.worldObj.getTotalWorldTime() % 1000 == 0) {
 				worldObj.setBlockToAir(xCoord, yCoord, zCoord);
 			}
@@ -141,28 +87,13 @@ public class TileEntityCombatDropPod extends TileEntity implements IBufPacketRec
 	//i hate working on this game so much sometimes
 	@Override
 	public Packet getDescriptionPacket() {
-<<<<<<< HEAD
-	    NBTTagCompound nbt = new NBTTagCompound();
-	    this.writeToNBT(nbt);
-	    return new S35PacketUpdateTileEntity(xCoord, yCoord, zCoord, 1, nbt);
-=======
 		NBTTagCompound nbt = new NBTTagCompound();
 		this.writeToNBT(nbt);
 		return new S35PacketUpdateTileEntity(xCoord, yCoord, zCoord, 1, nbt);
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	}
 
 	@Override
 	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt) {
-<<<<<<< HEAD
-	    this.readFromNBT(pkt.func_148857_g());
-	}
-	
-	@SideOnly(Side.CLIENT)
-	public AxisAlignedBB getRenderBoundingBox() {
-		return AxisAlignedBB.getBoundingBox(xCoord - 1, yCoord - 1, zCoord - 1, xCoord + 2, yCoord + 3,
-				zCoord + 2);
-=======
 		this.readFromNBT(pkt.func_148857_g());
 	}
 
@@ -183,7 +114,6 @@ public class TileEntityCombatDropPod extends TileEntity implements IBufPacketRec
 		}
 
 		return bb;
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	}
 
 
@@ -193,35 +123,16 @@ public class TileEntityCombatDropPod extends TileEntity implements IBufPacketRec
 		this.hatchopen = buf.readDouble();
 		this.hatchopen2 = buf.readDouble();
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	@Override
 	public void serialize(ByteBuf buf) {
 		buf.writeInt(color);
 		buf.writeDouble(hatchopen);
 		buf.writeDouble(hatchopen2);
-<<<<<<< HEAD
-
-=======
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	}
 	
 	@Override
 	public void writeToNBT(NBTTagCompound nbt) {
-<<<<<<< HEAD
-	    super.writeToNBT(nbt);
-
-	    if(entityType != null)
-	        nbt.setTag("EntityType", entityType);
-
-	    nbt.setInteger("amount", amount);
-	    nbt.setInteger("color", color);
-	    nbt.setInteger("delay", delay);
-	    nbt.setDouble("hatchopen", hatchopen);
-	    nbt.setDouble("hatchopen2", hatchopen2);
-=======
 		super.writeToNBT(nbt);
 
 		if(entityType != null)
@@ -232,24 +143,10 @@ public class TileEntityCombatDropPod extends TileEntity implements IBufPacketRec
 		nbt.setInteger("delay", delay);
 		nbt.setDouble("hatchopen", hatchopen);
 		nbt.setDouble("hatchopen2", hatchopen2);
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 	}
 
 	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
-<<<<<<< HEAD
-	    super.readFromNBT(nbt);
-
-	    entityType = nbt.getCompoundTag("EntityType");
-	    amount = nbt.getInteger("amount");
-	    color = nbt.getInteger("color");
-	    delay = nbt.getInteger("delay");
-	    hatchopen = nbt.getDouble("hatchopen");
-	    hatchopen2 = nbt.getDouble("hatchopen2");
-
-	}
-	
-=======
 		super.readFromNBT(nbt);
 
 		entityType = nbt.getCompoundTag("EntityType");
@@ -259,6 +156,5 @@ public class TileEntityCombatDropPod extends TileEntity implements IBufPacketRec
 		hatchopen = nbt.getDouble("hatchopen");
 		hatchopen2 = nbt.getDouble("hatchopen2");
 	}
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 
 }

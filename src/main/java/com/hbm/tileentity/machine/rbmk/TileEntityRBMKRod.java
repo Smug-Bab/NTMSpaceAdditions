@@ -106,7 +106,7 @@ public class TileEntityRBMKRod extends TileEntityRBMKSlottedBase implements IRBM
 	public void invalidate() {
 		super.invalidate();
 		
-		if(slots[0] != null && slots[0].getItem() instanceof ItemRBMKRod && ItemRBMKRod.getHullHeat(slots[0]) >= 150 && !RBMKDials.getMeltdownsDisabled(worldObj)) {
+		if(slots[0] != null && slots[0].getItem() instanceof ItemRBMKRod && ItemRBMKRod.getHullHeat(slots[0]) >= 1500 && !RBMKDials.getMeltdownsDisabled(worldObj)) {
 			this.meltdown();
 		}
 	}
@@ -443,7 +443,7 @@ public class TileEntityRBMKRod extends TileEntityRBMKSlottedBase implements IRBM
 	@Callback(direct = true)
 	@Optional.Method(modid = "OpenComputers")
 	public Object[] getFluxRatio(Context context, Arguments args) {
-		return new Object[] {fluxFastRatio};
+		return new Object[] {lastFluxRatio};
 	}
 
 	@Callback(direct = true)
@@ -507,7 +507,7 @@ public class TileEntityRBMKRod extends TileEntityRBMKSlottedBase implements IRBM
 
 		return new Object[] {
 			heat, returnValues.get(0), returnValues.get(1),
-			fluxQuantity, fluxFastRatio, returnValues.get(2), returnValues.get(3), returnValues.get(4),
+			lastFluxQuantity, lastFluxRatio, returnValues.get(2), returnValues.get(3), returnValues.get(4),
 			((RBMKRod)this.getBlockType()).moderated, xCoord, yCoord, zCoord
 		};
 	}
@@ -552,14 +552,10 @@ public class TileEntityRBMKRod extends TileEntityRBMKSlottedBase implements IRBM
 				PREFIX_VALUE + "columnheat",
 				PREFIX_VALUE + "rodheat",
 				PREFIX_VALUE + "depletion",
-<<<<<<< HEAD
-				PREFIX_VALUE + "xenon"
-=======
 				PREFIX_VALUE + "xenon",
 				PREFIX_VALUE + "fastflux",
 				PREFIX_VALUE + "slowflux",
 				PREFIX_VALUE + "flux"
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		};
 	}
 
@@ -571,12 +567,9 @@ public class TileEntityRBMKRod extends TileEntityRBMKSlottedBase implements IRBM
 			if((PREFIX_VALUE + "depletion").equals(name))	return "" + (int) (100 - ItemRBMKRod.getEnrichment(slots[0]) * 100);
 			if((PREFIX_VALUE + "xenon").equals(name))		return "" + (int) (ItemRBMKRod.getPoison(slots[0]));
 		}
-<<<<<<< HEAD
-=======
-		if((PREFIX_VALUE + "fastflux").equals(name))		return "" + (int) Math.ceil(fluxFromType(NType.FAST));
-		if((PREFIX_VALUE + "slowflux").equals(name))		return "" + (int) Math.ceil(fluxFromType(NType.SLOW));
-		if((PREFIX_VALUE + "flux").equals(name))			return "" + (int) Math.ceil(fluxFromType(NType.ANY));
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
+		if((PREFIX_VALUE + "fastflux").equals(name))		return "" + (int) (lastFluxQuantity * lastFluxRatio);
+		if((PREFIX_VALUE + "slowflux").equals(name))		return "" + (int) (lastFluxQuantity * (1 - lastFluxRatio));
+		if((PREFIX_VALUE + "flux").equals(name))			return "" + ((int) (lastFluxQuantity * lastFluxRatio) + (int) (lastFluxQuantity * (1 - lastFluxRatio)));
 		return null;
 	}
 }

@@ -18,14 +18,11 @@ public class NEIRegistry {
 		handlers.add(new ToolingHandler());
 		handlers.add(new ConstructionHandler());
 		handlers.add(new AnnihilatorHandler());
-<<<<<<< HEAD
-=======
 		handlers.add(new SolderingStationHandler());
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
+		handlers.add(new BlastFurnaceHandler());
 		handlers.add(new AnvilRecipeHandler());
 		handlers.add(new SmithingRecipeHandler());
 		handlers.add(new PressRecipeHandler());
-		handlers.add(new AlloyFurnaceRecipeHandler());
 		handlers.add(new ShredderRecipeHandler());
 		handlers.add(new CrucibleSmeltingHandler());
 		handlers.add(new CrucibleAlloyingHandler());
@@ -56,10 +53,7 @@ public class NEIRegistry {
 		handlers.add(new RBMKRodDisassemblyHandler());
 		handlers.add(new RBMKWasteDecayHandler());
 		handlers.add(new SatelliteHandler());
-<<<<<<< HEAD
-=======
 		handlers.add(new GrenadeRecipeHandler());
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		handlers.add(new DairyHandler());
 		handlers.add(new AtmosphericCompressorHandler());
 		handlers.add(new AtmosphereRecipeHandler());
@@ -87,10 +81,6 @@ public class NEIRegistry {
 		handlers.add(new ElectrolyserMetalHandler());
 		handlers.add(new AshpitHandler());
 		handlers.add(new ArcWelderHandler());
-<<<<<<< HEAD
-		handlers.add(new SolderingStationHandler());
-=======
->>>>>>> 5dd015fcd04498e0114669a19ac676855bef33d0
 		handlers.add(new VacuumCircuitHandler());
 		handlers.add(new ExposureChamberHandler());
 		handlers.add(new ArcFurnaceSolidHandler());

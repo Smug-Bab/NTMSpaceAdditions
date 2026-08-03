@@ -10,8 +10,6 @@ public class BiomeGenMohoCrag extends BiomeGenBaseMoho {
 		super(id);
 		this.setBiomeName("Moho Crag");
 
-		this.monsters.add(new BiomeGenBase.SpawnListEntry(EntityBlaze.class, 1, 1, 3));
-		
 		this.setHeight(new BiomeGenBase.Height(0.275F, 0.666F));
 
 		this.topBlock = ModBlocks.moho_regolith;
